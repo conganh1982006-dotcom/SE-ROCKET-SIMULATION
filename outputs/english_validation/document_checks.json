@@ -1,0 +1,68 @@
+{
+  "outputs/report_en.pdf": {
+    "pages": 6,
+    "language_scan_passed": true,
+    "all_pages_have_text": true,
+    "characters_per_page": [
+      1454,
+      1640,
+      1616,
+      2293,
+      1395,
+      3396
+    ]
+  },
+  "outputs/report_vi.pdf": {
+    "pages": 6,
+    "language_scan_passed": true,
+    "all_pages_have_text": true,
+    "characters_per_page": [
+      1454,
+      1640,
+      1616,
+      2293,
+      1395,
+      3396
+    ]
+  },
+  "outputs/full_report_en/C5_FULL_REPORT_EN.pdf": {
+    "pages": 29,
+    "language_scan_passed": true,
+    "all_pages_have_text": true,
+    "characters_per_page": [
+      486,
+      832,
+      1759,
+      2106,
+      2184,
+      1966,
+      2521,
+      1143,
+      2195,
+      2084,
+      2565,
+      1778,
+      2263,
+      2243,
+      2481,
+      2723,
+      1727,
+      2634,
+      2291,
+      1458,
+      173,
+      173,
+      2480,
+      1844,
+      2218,
+      1212,
+      1632,
+      2143,
+      1529
+    ]
+  },
+  "outputs/full_report_en/C5_FULL_REPORT_EN.docx": {
+    "language_scan_passed": true,
+    "archive_crc_ok": true
+  }
+}

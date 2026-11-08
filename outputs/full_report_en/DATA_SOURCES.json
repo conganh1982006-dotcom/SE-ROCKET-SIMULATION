@@ -1,0 +1,29 @@
+{
+  "report_date": "2026-11-02",
+  "evidence_date": "2026-10-28",
+  "simulation_rerun_for_this_report": false,
+  "inputs_sha256": {
+    "outputs/baseline.csv": "c14bcf64e01aba93a0c9bb3cf2c64e9df13b2c09a12d00a7405c95e45e87cdbd",
+    "outputs/trajectory_verification.json": "3fe397f85e10e23f4097240abbf44326891771322814b1c8cc851b0279c2f833",
+    "outputs/burn_rate_optima.csv": "92329f38db43dd349531a5d3b8a24f5448d7d1d648d884db8bebff1142c6b2c1",
+    "outputs/pytest.xml": "a835c92ee9d248717b2f54d6fb45c15db1f2b2972e2e339d8364e769bbdd50d9",
+    "outputs/usability/validation_v3_1.json": "f003b2323ed4ecf7fa2a25d966ceac7ee3089fc3b78ab39d17007565e686e24b",
+    "outputs/wmlab/summary.json": "6c3a225d767121a719b9db1dd09580bf2329b4f71b71fb0f13731dec0c5eea64",
+    "outputs/wmlab/dataset_validation.json": "8c6d48dbb3f2a6275ddcd478df91c9667aff07c209cf563bcf7d2f070751c4e5",
+    "c5_rocket.py": "16bb846f7c9fda80923d7f0a875883860309355ce6b66b17f2d19c7f2a251358",
+    "main.py": "6339d86735125060c67c4dd5201f05ba78a5ed2dc8b40eb7a1396d34f74882e5",
+    "rocket/simulator.py": "4abbc58016b6c25ac93563d345354f76caebe94e92f6ea098a6dc1189d7de539",
+    "verification/trajectory.py": "0c86dfe0b0bddc291c4398515be3328c8e3d538e034a56ab878d9386162077ce",
+    "vendor/starter_kit/de_kit/README.md": "5467d3c69c3fc5f6ba8a018d6837f0c77a010567b7aa11eeea12e966757ccc82",
+    "vendor/starter_kit/wmlab/wmlab/cli.py": "1de7650c9c8be91c32533f86e309aba6c421de8f0290067b9f878260cb7e97af",
+    "outputs/full_report/BAO_CAO_DAY_DU_C5.md": "cc4b5116b77f7c44eaed434d97d7a8735bdf0265f3896065fa47ee7e086e5930",
+    "outputs/quick_runs/20261028T083910_067323Z_compare_c86689ea/results.json": "35618fb4b7c4ab05a7c76df14f75a112ba4b26452123215824c9d0dfd3adef6a",
+    "outputs/quick_runs/20261028T083910_067323Z_compare_c86689ea/no_drag.csv": "65c0c78e7f7ac57733fe8bbb53349b52c255a80cba30942e1cbabed8781f6573",
+    "outputs/quick_runs/20261028T083910_067323Z_compare_c86689ea/with_drag.csv": "d88e08cfeef0f69799ea334e5a089325c4e4aca140af0850c691c0003be502bb"
+  },
+  "quick_run_plot_source": "outputs/quick_runs/20261028T083910_067323Z_compare_c86689ea",
+  "original_code_changed": false,
+  "language": "English",
+  "translated_from": "outputs/full_report/BAO_CAO_DAY_DU_C5.md",
+  "plot_labels": "English; regenerated from the same saved numerical data"
+}

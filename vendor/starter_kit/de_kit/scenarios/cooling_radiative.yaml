@@ -1,0 +1,16 @@
+# Nonlinear case (radiation): no analytic solution. Verification relies on convergence + physics checks.
+id: de-cooling-radiative-2201xxxx
+author: "Student A (ID 2201xxxx)"
+course: DE
+system: cooling
+law: "Convective + radiative cooling: dT/dt = -k (T - T_env) - r (T^4 - T_env^4)"
+params: {k: 0.05, r: 3.0e-10, T_env: 298.15, T_target: 333.15, method: rk4}
+initial: {T0: 363.15}
+t_span: [0.0, 120.0]
+dt: 0.5
+checks:
+  - {name: convergence_order, expected: 4, mode: self}
+  - within_bounds
+  - monotone_cooling
+license: CC-BY-4.0
+consent_physeval: false

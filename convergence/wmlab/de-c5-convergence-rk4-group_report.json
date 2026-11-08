@@ -1,0 +1,35 @@
+{
+  "id": "de-c5-convergence-rk4-group",
+  "author": "[ENTER: Names and student IDs of all group members]",
+  "course": "DE",
+  "system": "c5_rocket",
+  "passed_all": true,
+  "checks": [
+    {
+      "name": "convergence_order",
+      "passed": true,
+      "value": 3.9993884726247093,
+      "threshold": 4,
+      "note": "vs analytic solution at t=1.5, h=0.1"
+    },
+    {
+      "name": "within_bounds",
+      "passed": true,
+      "value": 9.399425682232732e-13,
+      "threshold": 1e-08,
+      "note": "largest excursion outside the physical range in v"
+    }
+  ],
+  "quantities": {
+    "v_burnout": 235.79281188478603,
+    "h_burnout": 214.14156434564094,
+    "apogee": 3047.8953939344747,
+    "t_burnout": 2.0,
+    "t_apogee": 26.035964514248597,
+    "max_acceleration_g": 15.989466530750935,
+    "max_upward_acceleration_g": 15.989466530750935,
+    "max_proper_acceleration_g": 16.989466530750935
+  },
+  "consent_physeval": false,
+  "license": "ALL-RIGHTS-RESERVED"
+}

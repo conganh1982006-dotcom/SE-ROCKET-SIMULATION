@@ -1,0 +1,17 @@
+# DELIBERATELY FAILING case: forward Euler with k*dt = 1.5 > 1 overshoots below room temperature.
+# The project must explain WHICH checks catch the error and WHY (stability of Euler: |1 - k dt| < 1).
+id: de-cooling-euler-unstable-2201xxxx
+author: "Student A (ID 2201xxxx)"
+course: DE
+system: cooling
+law: "Newton's law of cooling, forward Euler with a large step"
+params: {k: 0.05, r: 0.0, T_env: 298.15, T_target: 333.15, method: euler}
+initial: {T0: 363.15}
+t_span: [0.0, 120.0]
+dt: 30.0
+checks:
+  - within_bounds
+  - monotone_cooling
+  - {name: analytic_match, tol: 1.0e-2}
+license: CC-BY-4.0
+consent_physeval: false

@@ -1,0 +1,14 @@
+# Nonequilibrium: active noise without matching friction should violate FDT.
+id: amcs-langevin-active
+author: "Hoang E"
+course: AMCS
+system: langevin
+law: "Langevin equation with active noise"
+params: {m: 1.0, k: 2.0, gamma: 1.0, kT: 1.0, seed: 7, active: 1.0}
+initial: {x0: 0.0, v0: 0.0}
+t_span: [0.0, 400.0]
+dt: 0.005
+# Expected: X approximately T/T_eff approximately 0.5 because active noise doubles the effective temperature.
+checks: [{name: fdt, expect: violated}]
+license: CC-BY-4.0
+consent_physeval: true

@@ -1,0 +1,25 @@
+# Baseline case with an analytic solution: everything should PASS.
+id: de-cooling-newton-2201xxxx
+author: "Student A (ID 2201xxxx), Student B (ID ...)"
+course: DE
+system: cooling
+law: "Newton's law of cooling: dT/dt = -k (T - T_env)"
+params: {k: 0.05, r: 0.0, T_env: 298.15, T_target: 333.15, method: rk4}
+initial: {T0: 363.15}
+t_span: [0.0, 120.0]
+dt: 0.5
+question:
+  text: "A 90 °C coffee cools in a 25 °C room with k = 0.05 /min. When does it reach 60 °C?"
+  quantity: time_to_target
+  answer: 12.4       # t = ln((T0 - Te)/(Ttarget - Te)) / k  [min]
+  unit: min
+  tolerance: 0.005
+checks:
+  - answer_matches
+  - {name: analytic_match, tol: 1.0e-6}
+  - {name: convergence_order, expected: 4}
+  - {name: reference_match, tol: 1.0e-3}   # crossing times are interpolated between steps
+  - within_bounds
+  - monotone_cooling
+license: CC-BY-4.0
+consent_physeval: false

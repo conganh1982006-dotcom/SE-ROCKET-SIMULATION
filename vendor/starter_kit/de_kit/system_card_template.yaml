@@ -1,0 +1,33 @@
+# SYSTEM CARD — the "datasheet" of your simulator. It tells anyone re-using your dataset
+# what the model is, where it is valid, and how it was verified. Fill in every field.
+system: my_system
+title: "Descriptive title"
+authors: ["Full name (student ID)"]
+domain: "mechanics | thermal | electrical | fluids | biology | epidemiology | ..."
+equation: "Write the ODE system in plain text or LaTeX, e.g. m x'' + c x' + k x = F0 cos(w t)"
+order_and_type: "first-order nonlinear | second-order linear constant-coefficient | system of 2 nonlinear ODEs ..."
+state:
+  - {name: x, unit: m, meaning: "displacement"}
+parameters:
+  - {name: m, unit: kg, meaning: "mass", sample_range: [0.5, 2.0], why_this_range: "typical lab cart"}
+initial_conditions:
+  - {name: x0, unit: m, sample_range: [-1, 1]}
+time: {t_span: [0, 20], dt: 0.01, unit: s}
+analytic_solution:
+  available: "yes | only for ... | no"
+  formula: "x(t) = ..."
+  derivation_in_report: "section 2"
+reference_values: "independent formulas used by reference_match (exact, small-angle, asymptotic...)"
+physical_properties:          # what the verifier can test
+  - "energy conserved when c = 0"
+  - "x stays bounded"
+numerical_methods: ["euler", "heun", "rk4"]
+observed_convergence_order: {euler: null, heun: null, rk4: null}   # from your convergence study
+validity_limits: "when the model stops being physically meaningful (large angles, h -> 0, ...)"
+known_failure_modes: "e.g. forward Euler unstable when k*dt > 2; stiffness when ..."
+dataset:
+  command: "python -m wmlab dataset --system my_system --module my_system.py --n 200 -o my_system.npz"
+  n_trajectories: 200
+  shape: "(200, T, n_state)"
+references: ["textbook section / paper / website"]
+license: CC-BY-4.0

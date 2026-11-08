@@ -1,0 +1,163 @@
+{
+  "date": "2026-11-08",
+  "original_zip_sha256": "803efb89438ea7941aba716a3a3283bc814c870f6a9739e5378b2530fef08da1",
+  "protected_files_byte_identical": [
+    "c5_rocket.py",
+    "experiments/run.py",
+    "experiments/studies.py",
+    "requirements-wmlab.txt",
+    "requirements.txt",
+    "rocket/__init__.py",
+    "rocket/analytic.py",
+    "rocket/interface.py",
+    "rocket/methods.py",
+    "rocket/model.py",
+    "rocket/simulator.py",
+    "vendor/starter_kit/de_kit/README.md",
+    "vendor/starter_kit/de_kit/example_cooling.py",
+    "vendor/starter_kit/de_kit/example_system_card.yaml",
+    "vendor/starter_kit/de_kit/scenario_template.yaml",
+    "vendor/starter_kit/de_kit/scenarios/cooling_euler_bigstep.yaml",
+    "vendor/starter_kit/de_kit/scenarios/cooling_newton.yaml",
+    "vendor/starter_kit/de_kit/scenarios/cooling_radiative.yaml",
+    "vendor/starter_kit/de_kit/system_card_template.yaml",
+    "vendor/starter_kit/de_kit/template_system.py",
+    "verification/__init__.py",
+    "verification/checks.py",
+    "verification/convergence.py",
+    "verification/independent.py",
+    "verification/mutations.py",
+    "verification/scenarios.py",
+    "verification/trajectory.py"
+  ],
+  "six_same_environment_comparisons": [
+    {
+      "method": "euler",
+      "c": 0.0,
+      "max_absolute_array_differences": {
+        "t": 0.0,
+        "y": 0.0,
+        "a": 0.0
+      },
+      "quantities_equal": true
+    },
+    {
+      "method": "euler",
+      "c": 0.002,
+      "max_absolute_array_differences": {
+        "t": 0.0,
+        "y": 0.0,
+        "a": 0.0
+      },
+      "quantities_equal": true
+    },
+    {
+      "method": "heun",
+      "c": 0.0,
+      "max_absolute_array_differences": {
+        "t": 0.0,
+        "y": 0.0,
+        "a": 0.0
+      },
+      "quantities_equal": true
+    },
+    {
+      "method": "heun",
+      "c": 0.002,
+      "max_absolute_array_differences": {
+        "t": 0.0,
+        "y": 0.0,
+        "a": 0.0
+      },
+      "quantities_equal": true
+    },
+    {
+      "method": "rk4",
+      "c": 0.0,
+      "max_absolute_array_differences": {
+        "t": 0.0,
+        "y": 0.0,
+        "a": 0.0
+      },
+      "quantities_equal": true
+    },
+    {
+      "method": "rk4",
+      "c": 0.002,
+      "max_absolute_array_differences": {
+        "t": 0.0,
+        "y": 0.0,
+        "a": 0.0
+      },
+      "quantities_equal": true
+    }
+  ],
+  "dataset_array_equality": {
+    "c5_rocket.npz": {
+      "t": true,
+      "Y": true,
+      "meta": true,
+      "system": true,
+      "state": true
+    },
+    "outputs/local_dataset_200.npz": {
+      "format": true,
+      "official_wmlab": true,
+      "seed": true,
+      "offsets": true,
+      "t": true,
+      "y": true,
+      "a": true,
+      "parameter_names": true,
+      "parameters": true,
+      "quantity_names": true,
+      "quantities": true,
+      "consent_physeval": true
+    }
+  },
+  "scientific_csv_byte_equality": {
+    "outputs/baseline.csv": true,
+    "outputs/history_no_drag.csv": true,
+    "outputs/history_drag.csv": true,
+    "outputs/convergence.csv": true,
+    "outputs/peak_acceleration.csv": true,
+    "outputs/burn_rate_optima.csv": true,
+    "outputs/burn_rate_sweep.csv": true,
+    "outputs/stability_accuracy.csv": true
+  },
+  "scenario_payloads_unchanged": {
+    "convergence/wmlab/euler.yaml": true,
+    "convergence/wmlab/heun.yaml": true,
+    "convergence/wmlab/rk4.yaml": true,
+    "scenarios/01_baseline_drag.yaml": true,
+    "scenarios/02_analytic_no_drag.yaml": true,
+    "scenarios/03_euler_coarse_fail.yaml": true,
+    "scenarios/wmlab/c5_analytic_no_drag.yaml": true,
+    "scenarios/wmlab/c5_baseline_drag.yaml": true,
+    "scenarios/wmlab/c5_euler_coarse_fail.yaml": true
+  },
+  "toolkit_executable_structure_excluding_text_equal": {
+    "vendor/starter_kit/wmlab/examples/amcs_surrogate_starter.py": true,
+    "vendor/starter_kit/wmlab/wmlab/__init__.py": true,
+    "vendor/starter_kit/wmlab/wmlab/__main__.py": true,
+    "vendor/starter_kit/wmlab/wmlab/checks.py": true,
+    "vendor/starter_kit/wmlab/wmlab/cli.py": true,
+    "vendor/starter_kit/wmlab/wmlab/i18n.py": true,
+    "vendor/starter_kit/wmlab/wmlab/schema.py": true,
+    "vendor/starter_kit/wmlab/wmlab/sims/__init__.py": true,
+    "vendor/starter_kit/wmlab/wmlab/sims/_integ.py": true,
+    "vendor/starter_kit/wmlab/wmlab/sims/heat1d.py": true,
+    "vendor/starter_kit/wmlab/wmlab/sims/heat2d.py": true,
+    "vendor/starter_kit/wmlab/wmlab/sims/langevin.py": true,
+    "vendor/starter_kit/wmlab/wmlab/sims/lorentz.py": true,
+    "vendor/starter_kit/wmlab/wmlab/sims/lorenz.py": true,
+    "vendor/starter_kit/wmlab/wmlab/sims/oscillator.py": true,
+    "vendor/starter_kit/wmlab/wmlab/sims/projectile_drag.py": true
+  },
+  "historical_quick_run_plots_redrawn_from_preserved_csv": [
+    "outputs/quick_runs/20261028T083059_261985Z_compare_0d9e79d5",
+    "outputs/quick_runs/20261028T083907_823666Z_no-drag_6c4a2cac",
+    "outputs/quick_runs/20261028T083908_915938Z_with-drag_524ca87a",
+    "outputs/quick_runs/20261028T083910_067323Z_compare_c86689ea"
+  ]
+}

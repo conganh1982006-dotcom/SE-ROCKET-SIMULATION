@@ -1,0 +1,133 @@
+{
+  "python": "3.13.17 (main, Oct 21 2026, 17:49:22) [Clang 23.1.3 ]",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "pytest": {
+    "tests": 101,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 101
+  },
+  "scenarios_expected": 3,
+  "convergence_pass": 3,
+  "clean_trajectory_pass": 2,
+  "mutations_detected": 16,
+  "mutations_total": 16,
+  "original_and_events_unchanged": true,
+  "unchanged_files_against_v1_zip": [
+    "rocket/__init__.py",
+    "rocket/analytic.py",
+    "rocket/interface.py",
+    "rocket/methods.py",
+    "rocket/model.py",
+    "rocket/simulator.py",
+    "scenarios/01_baseline_drag.yaml",
+    "scenarios/02_analytic_no_drag.yaml",
+    "scenarios/03_euler_coarse_fail.yaml",
+    "tests/test_dataset.py",
+    "tests/test_reference.py",
+    "tests/test_verification.py"
+  ],
+  "baseline_quantity_differences": [
+    {
+      "c": 0,
+      "quantity": "c_kg_m",
+      "absolute_change": 0
+    },
+    {
+      "c": 0,
+      "quantity": "dt_s",
+      "absolute_change": 0.0
+    },
+    {
+      "c": 0,
+      "quantity": "v_burnout",
+      "absolute_change": 0.0
+    },
+    {
+      "c": 0,
+      "quantity": "h_burnout",
+      "absolute_change": 0.0
+    },
+    {
+      "c": 0,
+      "quantity": "apogee",
+      "absolute_change": 0.0
+    },
+    {
+      "c": 0,
+      "quantity": "t_burnout",
+      "absolute_change": 0.0
+    },
+    {
+      "c": 0,
+      "quantity": "t_apogee",
+      "absolute_change": 0.0
+    },
+    {
+      "c": 0,
+      "quantity": "max_acceleration_g",
+      "absolute_change": 0.0
+    },
+    {
+      "c": 0,
+      "quantity": "max_upward_acceleration_g",
+      "absolute_change": 0.0
+    },
+    {
+      "c": 0,
+      "quantity": "max_proper_acceleration_g",
+      "absolute_change": 0.0
+    },
+    {
+      "c": 0.002,
+      "quantity": "c_kg_m",
+      "absolute_change": 0.0
+    },
+    {
+      "c": 0.002,
+      "quantity": "dt_s",
+      "absolute_change": 0.0
+    },
+    {
+      "c": 0.002,
+      "quantity": "v_burnout",
+      "absolute_change": 0.0
+    },
+    {
+      "c": 0.002,
+      "quantity": "h_burnout",
+      "absolute_change": 0.0
+    },
+    {
+      "c": 0.002,
+      "quantity": "apogee",
+      "absolute_change": 0.0
+    },
+    {
+      "c": 0.002,
+      "quantity": "t_burnout",
+      "absolute_change": 0.0
+    },
+    {
+      "c": 0.002,
+      "quantity": "t_apogee",
+      "absolute_change": 0.0
+    },
+    {
+      "c": 0.002,
+      "quantity": "max_acceleration_g",
+      "absolute_change": 0.0
+    },
+    {
+      "c": 0.002,
+      "quantity": "max_upward_acceleration_g",
+      "absolute_change": 0.0
+    },
+    {
+      "c": 0.002,
+      "quantity": "max_proper_acceleration_g",
+      "absolute_change": 0.0
+    }
+  ]
+}

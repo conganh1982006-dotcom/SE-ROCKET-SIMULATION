@@ -1,0 +1,3 @@
+COMMAND: /tmp/c5-english-venv/bin/python -m wmlab --lang en validate /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_english/scenarios/wmlab/c5_baseline_drag.yaml --module c5_rocket.py
+
+Valid: de-c5-baseline-drag-group (c5_rocket, DE)

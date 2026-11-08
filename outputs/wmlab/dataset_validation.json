@@ -1,0 +1,35 @@
+{
+  "generated_by": "python -m wmlab dataset",
+  "official_toolkit": true,
+  "count": 200,
+  "shape": [
+    200,
+    201,
+    3
+  ],
+  "t_span_s": [
+    0,
+    4
+  ],
+  "dt_s": 0.02,
+  "stride": 1,
+  "seed": 20261027,
+  "scope": "Common-time ascent segments; full variable-duration ascents remain in local_dataset_200.npz.",
+  "independent_reference_checked": 200,
+  "max_absolute_error_h_v_m": [
+    2.69038821443246e-07,
+    1.7593370671420416e-07,
+    1.3988810110276972e-14
+  ],
+  "max_error_ratio_h_v_m": [
+    2.6151037409120527e-05,
+    1.7351401314367443e-05,
+    0.00013988810110276972
+  ],
+  "burnout_time_range_s": [
+    0.8011758775248239,
+    14.390830521436914
+  ],
+  "passed": true,
+  "dataset_sha256": "b88b6deb2c21ece3a6875d8c7c909fb4df765664d75b61c961539e4bedcfda02"
+}

@@ -1,0 +1,29 @@
+# One scenario = one run of your simulator with fixed parameters + the checks it must pass.
+# Submit AT LEAST three: (1) baseline that passes, (2) a case compared with an analytic or reference
+# value, (3) a DELIBERATELY FAILING case (wrong method / too large dt / model outside its validity)
+# and explain in the report which check catches it and why.
+id: de-<project-number>-<short-name>-<studentID>     # must be unique
+author: "Full name (student ID), Full name (student ID)"
+course: DE
+system: my_system                                  # = NAME in your .py file
+law: "State the law/equation in words"
+params: {m: 1.0, k: 4.0, method: rk4}              # every parameter your rhs() reads, with SI units
+initial: {x0: 0.1, v0: 0.0}
+t_span: [0.0, 20.0]
+dt: 0.01
+question:                                          # optional but recommended
+  text: "What is the period of oscillation?"
+  quantity: x_final                                # a key returned by quantities()
+  answer: 0.0                                      # YOUR hand-derived answer
+  unit: s
+  tolerance: 0.01                                  # relative tolerance
+checks:                                            # choose those that make sense for your system
+  - answer_matches
+  - {name: analytic_match, tol: 1.0e-6}
+  - {name: convergence_order, expected: 4}         # 1 for euler, 2 for heun, 4 for rk4; mode: self if no analytic
+  - {name: energy_conserved, tol: 1.0e-6}          # or energy_nonincreasing / invariant_conserved
+  - within_bounds
+  - reference_match
+ai_use: "none"                                     # declare any AI assistance: tool + what it was used for
+license: CC-BY-4.0                                 # CC-BY-4.0 | CC0-1.0 | MIT | ALL-RIGHTS-RESERVED
+consent_physeval: false                            # VOLUNTARY. Does not affect your grade. Decide after grading.

@@ -1,0 +1,7 @@
+COMMAND: /tmp/c5-english-venv/bin/python -m wmlab --lang en check /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_english/convergence/wmlab/rk4.yaml --module c5_rocket.py -o /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_english/convergence/wmlab
+
+# de-c5-convergence-rk4-group — c5_rocket
+  [PASS] convergence_order      value=3.999        threshold=4  vs analytic solution at t=1.5, h=0.1
+  [PASS] within_bounds          value=9.399e-13    threshold=1e-08  largest excursion outside the physical range in v
+  Quantities: v_burnout=235.79, h_burnout=214.14, apogee=3047.9, t_burnout=2, t_apogee=26.036, max_acceleration_g=15.989, max_upward_acceleration_g=15.989, max_proper_acceleration_g=16.989
+  => ALL PASSED · report: /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_english/convergence/wmlab/de-c5-convergence-rk4-group_report.json

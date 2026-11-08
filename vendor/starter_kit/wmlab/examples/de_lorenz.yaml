@@ -1,0 +1,12 @@
+id: de-lorenz-classic
+author: "Le Van C"
+course: DE
+system: lorenz
+law: "Lorenz system with classical parameters"
+params: {sigma: 10.0, rho: 28.0, beta: 2.6666666666666665}
+initial: {x: 1.0, y: 1.0, z: 1.0}
+t_span: [0.0, 20.0]
+dt: 0.01
+checks: [lyapunov_reference, {name: convergence_order, expected: 4.0, mode: self, h: 0.02, horizon: 2.0}]
+license: CC-BY-4.0
+consent_physeval: true

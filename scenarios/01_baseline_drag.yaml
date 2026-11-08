@@ -1,0 +1,12 @@
+# Provisional LOCAL format. Not the professor's undocumented YAML schema.
+format: c5-local-scenario-v1
+id: baseline_drag
+expected: PASS
+parameters: {c: 0.002}
+numerical: {method: rk4, dt: 0.02}
+reference: scipy_dop853
+tolerances:
+  atol: {v_burnout: 0.01, h_burnout: 0.01, apogee: 0.05, t_apogee: 0.001}
+  rtol: 0.000001
+ai_use: "OpenAI Codex: implementation, derivation, automated tests and Vietnamese documentation; student must review and explain."
+consent_physeval: false

@@ -1,0 +1,58 @@
+COMMAND: /tmp/c5-english-venv/bin/python main.py no-drag --method rk4 --dt 0.02
+
+Quantity                                     No drag
+Burnout: time (s)                           2.000000
+Burnout: altitude (m)                     214.141564
+Burnout: velocity (m/s)                   235.792812
+Apogee: altitude (m)                     3047.895394
+Time to apogee (s)                         26.035965
+Peak |a| / g                               15.989467
+
+Saved: /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_english/outputs/quick_runs/20261108T080246_713986Z_no-drag_752323ca
+See the 4 PNG plots, summary.csv, results.json and trajectory CSV files.
+Peaks include samples and both burnout limits; reduce dt to assess sensitivity.
+This is a quick run. Run python main.py verify to check V3.
+
+
+COMMAND: /tmp/c5-english-venv/bin/python main.py with-drag --method rk4 --dt 0.02
+
+Quantity                                   With drag
+Burnout: time (s)                           2.000000
+Burnout: altitude (m)                     183.592580
+Burnout: velocity (m/s)                   172.271882
+Apogee: altitude (m)                      544.419764
+Time to apogee (s)                          8.999454
+Peak |a| / g                               11.084132
+
+Saved: /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_english/outputs/quick_runs/20261108T080247_639323Z_with-drag_4a695aac
+See the 4 PNG plots, summary.csv, results.json and trajectory CSV files.
+Peaks include samples and both burnout limits; reduce dt to assess sensitivity.
+This is a quick run. Run python main.py verify to check V3.
+
+
+COMMAND: /tmp/c5-english-venv/bin/python main.py compare --method rk4 --dt 0.02
+
+Quantity                                     No drag           With drag
+Burnout: time (s)                           2.000000            2.000000
+Burnout: altitude (m)                     214.141564          183.592580
+Burnout: velocity (m/s)                   235.792812          172.271882
+Apogee: altitude (m)                     3047.895394          544.419764
+Time to apogee (s)                         26.035965            8.999454
+Peak |a| / g                               15.989467           11.084132
+
+Saved: /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_english/outputs/quick_runs/20261108T080248_816956Z_compare_dea0da62
+See the 4 PNG plots, summary.csv, results.json and trajectory CSV files.
+Peaks include samples and both burnout limits; reduce dt to assess sensitivity.
+This is a quick run. Run python main.py verify to check V3.
+
+
+INTERACTIVE MENU FROM /tmp; input: 0
+
+C5 ROCKET — CONTROL MENU
+  1. No Drag Simulation
+  2. With Drag Simulation
+  3. Compare No Drag vs With Drag
+  4. Run Verification (local + official wmlab)
+  5. Generate Report
+  0. Exit
+Select [0–5]: 

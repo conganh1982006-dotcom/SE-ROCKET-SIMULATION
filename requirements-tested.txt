@@ -1,0 +1,8 @@
+# Exact top-level versions used; wmlab comes ONLY from the supplied archive.
+numpy==2.5.0
+scipy==1.18.0
+matplotlib==3.11.0
+pytest==9.1.1
+PyYAML==6.0.3
+reportlab==5.1.0
+./vendor/starter_kit/wmlab

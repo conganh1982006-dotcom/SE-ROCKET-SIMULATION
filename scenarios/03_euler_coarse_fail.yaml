@@ -1,0 +1,14 @@
+# The simulation is deliberately inaccurate. A named accuracy failure is required.
+format: c5-local-scenario-v1
+id: euler_coarse_fail
+expected: FAIL
+must_fail_check: v_burnout
+parameters: {c: 0.0}
+numerical: {method: euler, dt: 0.5}
+reference: analytic_no_drag
+tolerances:
+  atol: {v_burnout: 0.01, h_burnout: 0.01, apogee: 0.05, t_apogee: 0.001}
+  rtol: 0.000001
+explanation: "Coarse Euler has large accumulated integration error. This demonstrates inaccuracy, not necessarily numerical instability."
+ai_use: "OpenAI Codex: implementation, derivation, automated tests and Vietnamese documentation; student must review and explain."
+consent_physeval: false

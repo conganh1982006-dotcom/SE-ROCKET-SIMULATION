@@ -1,0 +1,13 @@
+# DE example: FTCS with an excessive dt; verification should detect instability.
+id: de-heat-ftcs-unstable
+author: "Tran Thi B"
+course: DE
+system: heat1d
+law: "u_t = alpha u_xx, Dirichlet boundaries"
+params: {alpha: 0.05, L: 1.0, nx: 51, scheme: ftcs}
+initial: {modes: {"1": 1.0, "3": 0.3}}
+t_span: [0.0, 0.5]
+dt: 0.005
+checks: [stability, max_principle]
+license: CC-BY-4.0
+consent_physeval: true

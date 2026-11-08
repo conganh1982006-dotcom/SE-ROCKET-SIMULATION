@@ -1,0 +1,22 @@
+# PHY1 example: no-drag range. Students compute answer using the formula.
+id: phy1-proj-range-demo
+author: "Nguyen Van A (MSSV ...)"
+course: PHY1
+system: projectile_drag
+law: "Newton's second law, uniform gravity, no drag"
+params: {g: 9.81, k_over_m: 0.0, m: 1.0}
+initial: {v0: 20.0, angle_deg: 35.0, h0: 0.0}
+t_span: [0.0, 4.0]
+dt: 0.001
+question:
+  text: "A ball is launched from the ground at 20 m/s and 35 degrees. Calculate its range."
+  quantity: range
+  answer: 38.31          # R = v0^2 sin(2θ)/g
+  unit: m
+  tolerance: 0.005       # Allowed relative error.
+misconceptions:
+  - "A 45-degree angle always gives the greatest range, even when h0 > 0"
+  - "Velocity is zero at the top of the trajectory"
+checks: [answer_matches, energy_conserved, {name: analytic_match, tol: 1.0e-6}]
+license: CC-BY-4.0
+consent_physeval: true

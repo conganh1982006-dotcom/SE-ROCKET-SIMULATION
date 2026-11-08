@@ -1,0 +1,3 @@
+baseline_drag: actual=PASS expected=PASS demonstration=PASS; failures=[]
+analytic_no_drag: actual=PASS expected=PASS demonstration=PASS; failures=[]
+euler_coarse_fail: actual=FAIL expected=FAIL demonstration=PASS; failures=['h_burnout', 'v_burnout', 'apogee', 't_apogee', 'coast_height_relation', 'trajectory_h', 'trajectory_v', 'dynamics_h_prime', 'dynamics_v_prime']

@@ -1,0 +1,183 @@
+{
+  "reference": "c5_rocket_complete_v3.zip (before CLI upgrade)",
+  "source_sha256": "d60287b9b380d5d706ba27c23625f989fc7dca29dd2f46e4e279b25491ae7954",
+  "python": "3.13.14",
+  "cases": [
+    {
+      "case": "euler_no_drag",
+      "max_absolute_difference": {
+        "t": 0.0,
+        "y": 0.0,
+        "a": 0.0
+      },
+      "quantity_differences": {
+        "v_burnout": 0.0,
+        "h_burnout": 0.0,
+        "apogee": 0.0,
+        "t_burnout": 0.0,
+        "t_apogee": 0.0,
+        "max_acceleration_g": 0.0,
+        "max_upward_acceleration_g": 0.0,
+        "max_proper_acceleration_g": 0.0
+      },
+      "identical": true,
+      "quantities": {
+        "v_burnout": 235.12733039435008,
+        "h_burnout": 211.23926220906202,
+        "apogee": 3031.3709744633165,
+        "t_burnout": 2.0,
+        "t_apogee": 25.96812746119668,
+        "max_acceleration_g": 15.989466530750935,
+        "max_upward_acceleration_g": 15.989466530750935,
+        "max_proper_acceleration_g": 16.989466530750935
+      }
+    },
+    {
+      "case": "euler_with_drag",
+      "max_absolute_difference": {
+        "t": 0.0,
+        "y": 0.0,
+        "a": 0.0
+      },
+      "quantity_differences": {
+        "v_burnout": 0.0,
+        "h_burnout": 0.0,
+        "apogee": 0.0,
+        "t_burnout": 0.0,
+        "t_apogee": 0.0,
+        "max_acceleration_g": 0.0,
+        "max_upward_acceleration_g": 0.0,
+        "max_proper_acceleration_g": 0.0
+      },
+      "identical": true,
+      "quantities": {
+        "v_burnout": 172.5036748584065,
+        "h_burnout": 181.93246145547388,
+        "apogee": 542.7700422124607,
+        "t_burnout": 2.0,
+        "t_apogee": 8.977418224103355,
+        "max_acceleration_g": 11.111287067500792,
+        "max_upward_acceleration_g": 9.842521858255777,
+        "max_proper_acceleration_g": 10.842521858255777
+      }
+    },
+    {
+      "case": "heun_no_drag",
+      "max_absolute_difference": {
+        "t": 0.0,
+        "y": 0.0,
+        "a": 0.0
+      },
+      "quantity_differences": {
+        "v_burnout": 0.0,
+        "h_burnout": 0.0,
+        "apogee": 0.0,
+        "t_burnout": 0.0,
+        "t_apogee": 0.0,
+        "max_acceleration_g": 0.0,
+        "max_upward_acceleration_g": 0.0,
+        "max_proper_acceleration_g": 0.0
+      },
+      "identical": true,
+      "quantities": {
+        "v_burnout": 235.7939970610167,
+        "h_burnout": 214.13800881694897,
+        "apogee": 3047.9203253311985,
+        "t_burnout": 2.0,
+        "t_apogee": 26.03608532731986,
+        "max_acceleration_g": 15.989466530750935,
+        "max_upward_acceleration_g": 15.989466530750935,
+        "max_proper_acceleration_g": 16.989466530750935
+      }
+    },
+    {
+      "case": "heun_with_drag",
+      "max_absolute_difference": {
+        "t": 0.0,
+        "y": 0.0,
+        "a": 0.0
+      },
+      "quantity_differences": {
+        "v_burnout": 0.0,
+        "h_burnout": 0.0,
+        "apogee": 0.0,
+        "t_burnout": 0.0,
+        "t_apogee": 0.0,
+        "max_acceleration_g": 0.0,
+        "max_upward_acceleration_g": 0.0,
+        "max_proper_acceleration_g": 0.0
+      },
+      "identical": true,
+      "quantities": {
+        "v_burnout": 172.26871250551932,
+        "h_burnout": 183.59203069439272,
+        "apogee": 544.4143165648609,
+        "t_burnout": 2.0,
+        "t_apogee": 8.999478975651623,
+        "max_acceleration_g": 11.083761232860777,
+        "max_upward_acceleration_g": 9.841003022772874,
+        "max_proper_acceleration_g": 10.841003022772874
+      }
+    },
+    {
+      "case": "rk4_no_drag",
+      "max_absolute_difference": {
+        "t": 0.0,
+        "y": 0.0,
+        "a": 0.0
+      },
+      "quantity_differences": {
+        "v_burnout": 0.0,
+        "h_burnout": 0.0,
+        "apogee": 0.0,
+        "t_burnout": 0.0,
+        "t_apogee": 0.0,
+        "max_acceleration_g": 0.0,
+        "max_upward_acceleration_g": 0.0,
+        "max_proper_acceleration_g": 0.0
+      },
+      "identical": true,
+      "quantities": {
+        "v_burnout": 235.79281188478603,
+        "h_burnout": 214.14156434564094,
+        "apogee": 3047.8953939344747,
+        "t_burnout": 2.0,
+        "t_apogee": 26.035964514248597,
+        "max_acceleration_g": 15.989466530750935,
+        "max_upward_acceleration_g": 15.989466530750935,
+        "max_proper_acceleration_g": 16.989466530750935
+      }
+    },
+    {
+      "case": "rk4_with_drag",
+      "max_absolute_difference": {
+        "t": 0.0,
+        "y": 0.0,
+        "a": 0.0
+      },
+      "quantity_differences": {
+        "v_burnout": 0.0,
+        "h_burnout": 0.0,
+        "apogee": 0.0,
+        "t_burnout": 0.0,
+        "t_apogee": 0.0,
+        "max_acceleration_g": 0.0,
+        "max_upward_acceleration_g": 0.0,
+        "max_proper_acceleration_g": 0.0
+      },
+      "identical": true,
+      "quantities": {
+        "v_burnout": 172.27188210139863,
+        "h_burnout": 183.59257963288135,
+        "apogee": 544.4197640372148,
+        "t_burnout": 2.0,
+        "t_apogee": 8.999453970755754,
+        "max_acceleration_g": 11.084132301310971,
+        "max_upward_acceleration_g": 9.840988319555406,
+        "max_proper_acceleration_g": 10.840988319555406
+      }
+    }
+  ],
+  "protected_original_files": 70,
+  "protected_files_unchanged": true
+}

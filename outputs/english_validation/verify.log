@@ -1,0 +1,33 @@
+Checking the V3 configurations. The deliberately inaccurate Euler case must be detected as FAIL.
+
+Running: pytest -q
+........................................................................ [ 41%]
+........................................................................ [ 83%]
+............................                                             [100%]
+172 passed in 9.76s
+
+Running: verification.scenarios
+baseline_drag: actual=PASS expected=PASS demonstration=PASS; failures=[]
+analytic_no_drag: actual=PASS expected=PASS demonstration=PASS; failures=[]
+euler_coarse_fail: actual=FAIL expected=FAIL demonstration=PASS; failures=['h_burnout', 'v_burnout', 'apogee', 't_apogee', 'coast_height_relation', 'trajectory_h', 'trajectory_v', 'dynamics_h_prime', 'dynamics_v_prime']
+
+Running: verification.convergence
+euler {'v_burnout': 0.9962957134356452, 'h_burnout': 0.9930653244869778, 'apogee': 0.9932191821298487, 't_apogee': 0.9962957134246739} PASS
+heun {'v_burnout': 1.9999315663361212, 'h_burnout': 1.9999315657455738, 'apogee': 1.9999640876321085, 't_apogee': 1.999931574036977} PASS
+rk4 {'v_burnout': 4.001140493520063, 'h_burnout': 3.9998741541423932, 'apogee': 4.000082015324409, 't_apogee': 4.008733834861761} PASS
+
+Running: verification.mutations
+Clean c=0.0: PASS (1303 samples)
+Clean c=0.002: PASS (451 samples)
+Detected mutations: 16/16
+Demonstration: PASS
+
+Running: scripts.wmlab_verify
+wmlab c5_baseline_drag: actual=PASS, expected=PASS
+wmlab c5_analytic_no_drag: actual=PASS, expected=PASS
+wmlab c5_euler_coarse_fail: actual=FAIL, expected=FAIL
+wmlab euler: actual=PASS, expected=PASS
+wmlab heun: actual=PASS, expected=PASS
+wmlab rk4: actual=PASS, expected=PASS
+Official wmlab complete: 3 expected scenario outcomes, 3 convergence reports, 200 verified dataset segments.
+Verification complete: all outcomes match expectations.

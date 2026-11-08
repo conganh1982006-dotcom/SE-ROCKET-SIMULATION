@@ -1,0 +1,13 @@
+# PHY2 (Thermal Physics) / AMCS: equipartition and fluctuation-dissipation relation.
+id: phy2-langevin-eq
+author: "Pham D"
+course: PHY2
+system: langevin
+law: "Langevin equation in a thermal bath at temperature kT"
+params: {m: 1.0, k: 2.0, gamma: 1.0, kT: 1.0, seed: 7, active: 0.0}
+initial: {x0: 0.0, v0: 0.0}
+t_span: [0.0, 2000.0]   # Statistical error ~ sqrt(correlation time / T); a short run may fail.
+dt: 0.005
+checks: [equipartition, fdt]
+license: CC-BY-4.0
+consent_physeval: true

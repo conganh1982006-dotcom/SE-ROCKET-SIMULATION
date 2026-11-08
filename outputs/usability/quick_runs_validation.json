@@ -1,0 +1,24 @@
+{
+  "runs": [
+    {
+      "command": "python main.py no-drag --method rk4 --dt 0.02",
+      "exit_code": 0,
+      "directory": "outputs/quick_runs/20261028T083907_823666Z_no-drag_6c4a2cac",
+      "results": "outputs/quick_runs/20261028T083907_823666Z_no-drag_6c4a2cac/results.json"
+    },
+    {
+      "command": "python main.py with-drag --method rk4 --dt 0.02 --c 0.002",
+      "exit_code": 0,
+      "directory": "outputs/quick_runs/20261028T083908_915938Z_with-drag_524ca87a",
+      "results": "outputs/quick_runs/20261028T083908_915938Z_with-drag_524ca87a/results.json"
+    },
+    {
+      "command": "python main.py compare --method rk4 --dt 0.02 --c 0.002",
+      "exit_code": 0,
+      "directory": "outputs/quick_runs/20261028T083910_067323Z_compare_c86689ea",
+      "results": "outputs/quick_runs/20261028T083910_067323Z_compare_c86689ea/results.json"
+    }
+  ],
+  "existing_files_checked": 150,
+  "all_existing_files_unchanged": true
+}

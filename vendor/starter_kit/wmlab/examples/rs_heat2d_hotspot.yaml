@@ -1,0 +1,21 @@
+# Remote Sensing R3 / DE P3: insulated plate with two hotspots, a synthetic thermal image source.
+id: rs-heat2d-hotspot
+author: "Nhom R3"
+course: RS
+system: heat2d
+law: "u_t = alpha ∇²u + q(x,y), insulated boundaries"
+params:
+  alpha: 0.01
+  Lx: 1.0
+  Ly: 1.0
+  nx: 41
+  ny: 41
+  sources:
+    - {x: 0.3, y: 0.6, sigma: 0.04, power: 3.0}
+    - {x: 0.7, y: 0.3, sigma: 0.06, power: 1.5}
+initial: {T0: 0.0}
+t_span: [0.0, 2.0]
+dt: 0.01
+checks: [stability, heat_balance]
+license: CC-BY-4.0
+consent_physeval: true

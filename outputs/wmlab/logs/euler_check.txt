@@ -1,0 +1,7 @@
+COMMAND: /tmp/c5-english-venv/bin/python -m wmlab --lang en check /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_english/convergence/wmlab/euler.yaml --module c5_rocket.py -o /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_english/convergence/wmlab
+
+# de-c5-convergence-euler-group — c5_rocket
+  [PASS] convergence_order      value=0.9885       threshold=1  vs analytic solution at t=1.5, h=0.1
+  [PASS] within_bounds          value=0            threshold=1e-08  largest excursion outside the physical range 
+  Quantities: v_burnout=235.13, h_burnout=211.24, apogee=3031.4, t_burnout=2, t_apogee=25.968, max_acceleration_g=15.989, max_upward_acceleration_g=15.989, max_proper_acceleration_g=16.989
+  => ALL PASSED · report: /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_english/convergence/wmlab/de-c5-convergence-euler-group_report.json

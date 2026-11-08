@@ -1,0 +1,161 @@
+{
+  "count": 12,
+  "detected": 12,
+  "cases": [
+    {
+      "c": 0.002,
+      "time_s": 1.0000000000000004,
+      "field": "h",
+      "delta": 1.0,
+      "detected": true,
+      "original_and_endpoints_unchanged": true,
+      "failed_checks": [
+        "trajectory_reference",
+        "dynamics_consistency"
+      ]
+    },
+    {
+      "c": 0.002,
+      "time_s": 1.0000000000000004,
+      "field": "v",
+      "delta": 25.0,
+      "detected": true,
+      "original_and_endpoints_unchanged": true,
+      "failed_checks": [
+        "trajectory_reference",
+        "dynamics_consistency"
+      ]
+    },
+    {
+      "c": 0.002,
+      "time_s": 1.0000000000000004,
+      "field": "m",
+      "delta": 0.02,
+      "detected": true,
+      "original_and_endpoints_unchanged": true,
+      "failed_checks": [
+        "trajectory_reference",
+        "dynamics_consistency",
+        "event_consistency"
+      ]
+    },
+    {
+      "c": 0.002,
+      "time_s": 3.000000000000001,
+      "field": "h",
+      "delta": 1.0,
+      "detected": true,
+      "original_and_endpoints_unchanged": true,
+      "failed_checks": [
+        "trajectory_reference",
+        "dynamics_consistency"
+      ]
+    },
+    {
+      "c": 0.002,
+      "time_s": 3.000000000000001,
+      "field": "v",
+      "delta": 25.0,
+      "detected": true,
+      "original_and_endpoints_unchanged": true,
+      "failed_checks": [
+        "trajectory_reference",
+        "dynamics_consistency"
+      ]
+    },
+    {
+      "c": 0.002,
+      "time_s": 3.000000000000001,
+      "field": "m",
+      "delta": 0.02,
+      "detected": true,
+      "original_and_endpoints_unchanged": true,
+      "failed_checks": [
+        "trajectory_reference",
+        "dynamics_consistency",
+        "event_consistency"
+      ]
+    },
+    {
+      "c": 0.0,
+      "time_s": 1.0000000000000004,
+      "field": "h",
+      "delta": 1.0,
+      "detected": true,
+      "original_and_endpoints_unchanged": true,
+      "failed_checks": [
+        "analytic_match",
+        "trajectory_reference",
+        "dynamics_consistency"
+      ]
+    },
+    {
+      "c": 0.0,
+      "time_s": 1.0000000000000004,
+      "field": "v",
+      "delta": 25.0,
+      "detected": true,
+      "original_and_endpoints_unchanged": true,
+      "failed_checks": [
+        "analytic_match",
+        "trajectory_reference",
+        "dynamics_consistency"
+      ]
+    },
+    {
+      "c": 0.0,
+      "time_s": 1.0000000000000004,
+      "field": "m",
+      "delta": 0.02,
+      "detected": true,
+      "original_and_endpoints_unchanged": true,
+      "failed_checks": [
+        "analytic_match",
+        "trajectory_reference",
+        "dynamics_consistency",
+        "event_consistency"
+      ]
+    },
+    {
+      "c": 0.0,
+      "time_s": 3.000000000000001,
+      "field": "h",
+      "delta": 1.0,
+      "detected": true,
+      "original_and_endpoints_unchanged": true,
+      "failed_checks": [
+        "analytic_match",
+        "trajectory_reference",
+        "dynamics_consistency"
+      ]
+    },
+    {
+      "c": 0.0,
+      "time_s": 3.000000000000001,
+      "field": "v",
+      "delta": 25.0,
+      "detected": true,
+      "original_and_endpoints_unchanged": true,
+      "failed_checks": [
+        "analytic_match",
+        "trajectory_reference",
+        "dynamics_consistency"
+      ]
+    },
+    {
+      "c": 0.0,
+      "time_s": 3.000000000000001,
+      "field": "m",
+      "delta": 0.02,
+      "detected": true,
+      "original_and_endpoints_unchanged": true,
+      "failed_checks": [
+        "analytic_match",
+        "trajectory_reference",
+        "dynamics_consistency",
+        "event_consistency"
+      ]
+    }
+  ],
+  "acceleration_channel": "Not exported in wmlab STATE=[h,v,m]; use the v2 adapter mutation tests for a."
+}

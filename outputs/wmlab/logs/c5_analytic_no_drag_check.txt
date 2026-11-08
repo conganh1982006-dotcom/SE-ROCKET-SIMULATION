@@ -1,0 +1,13 @@
+COMMAND: /tmp/c5-english-venv/bin/python -m wmlab --lang en check /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_english/scenarios/wmlab/c5_analytic_no_drag.yaml --module c5_rocket.py -o /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_english/outputs/wmlab
+
+# de-c5-analytic-no-drag-group — c5_rocket
+  [PASS] answer_matches         value=1.234e-11    threshold=1e-06  answer 3047.9 vs simulation 3047.9
+  [PASS] analytic_match         value=1.234e-11    threshold=1e-07  max relative error vs analytic solution
+  [PASS] reference_match        value=2.509e-11    threshold=1e-06  h_burnout: sim=214.142 ref=214.142; v_burnout: sim=235.793 ref=235.793; apogee: sim=3047.9 ref=3047.9; t_burnout: sim=2 ref=2; t_apogee: sim=26.036 ref=26.036
+  [PASS] within_bounds          value=9.399e-13    threshold=1e-08  largest excursion outside the physical range in v
+  [PASS] convergence_order      value=3.999        threshold=4  vs analytic solution at t=1.5, h=0.1
+  [PASS] trajectory_reference   value=0            threshold=0  Checks operate on supplied t,Y. Acceleration is not an exported channel; no independent acceleration-output claim here (use the v2 Trajectory adapter for that).
+  [PASS] dynamics_consistency   value=0            threshold=0  Checks operate on supplied t,Y. Acceleration is not an exported channel; no independent acceleration-output claim here (use the v2 Trajectory adapter for that).
+  [PASS] event_consistency      value=0            threshold=0  Checks operate on supplied t,Y. Acceleration is not an exported channel; no independent acceleration-output claim here (use the v2 Trajectory adapter for that).
+  Quantities: v_burnout=235.79, h_burnout=214.14, apogee=3047.9, t_burnout=2, t_apogee=26.036, max_acceleration_g=15.989, max_upward_acceleration_g=15.989, max_proper_acceleration_g=16.989
+  => ALL PASSED · report: /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_english/outputs/wmlab/de-c5-analytic-no-drag-group_report.json

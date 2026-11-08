@@ -1,0 +1,18 @@
+id: phy1-osc-forced
+author: "Vo F"
+course: PHY1
+system: oscillator
+law: "m x'' + c x' + k x = F0 cos(w t)"
+params: {m: 1.0, c: 0.2, k: 4.0, F0: 1.0, w: 1.9}
+initial: {x0: 0.5, v0: 0.0}
+t_span: [0.0, 60.0]
+dt: 0.01
+question:
+  text: "Steady-state oscillation amplitude"
+  quantity: steady_amplitude
+  answer: 1.836     # F0 / sqrt((k - m w^2)^2 + (c w)^2)
+  unit: m
+  tolerance: 0.01
+checks: [answer_matches, {name: analytic_match, tol: 1.0e-6}, convergence_order]
+license: CC-BY-4.0
+consent_physeval: true

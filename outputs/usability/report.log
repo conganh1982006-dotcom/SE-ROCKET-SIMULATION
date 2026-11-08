@@ -1,0 +1,22 @@
+English translation of the historical V3.1 log; numerical output and run identity retained.
+Reproducing the V3 tests, experiments, wmlab checks, datasets and standard report.
+Standard results in outputs/ will be updated; quick_runs/ will be retained.
+
+Running: scripts.reproduce
+........................................................................ [ 43%]
+........................................................................ [ 86%]
+......................                                                   [100%]
+166 passed in 9.14s
+
+Convergence and scenarios generated.
+Performance and accuracy studies generated.
+Local dataset: 200 trajectories. Summary: /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_reference/outputs/summary.json
+wmlab c5_baseline_drag: actual=PASS, expected=PASS
+wmlab c5_analytic_no_drag: actual=PASS, expected=PASS
+wmlab c5_euler_coarse_fail: actual=FAIL, expected=FAIL
+wmlab euler: actual=PASS, expected=PASS
+wmlab heun: actual=PASS, expected=PASS
+wmlab rk4: actual=PASS, expected=PASS
+Official wmlab complete: 3 expected scenario outcomes, 3 convergence reports, 200 verified dataset segments.
+Reports written to /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_reference/outputs/report_vi.pdf
+Complete. Open outputs/report_vi.pdf and docs/MEMBER_C_HANDOFF_VI.md.

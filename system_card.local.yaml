@@ -1,0 +1,31 @@
+# LEGACY v2 local model card. The current official-template card is system_card.yaml.
+superseded_by: system_card.yaml
+format: c5-local-system-card-v1
+name: C5 Model Rocket Reference
+official_wmlab: false
+purpose: Independent development and verification reference for Member C
+authors: "Phạm Công Anh (SESEIU24002); Nguyễn Đức Anh (SESEIU25003); Trần Trung Kiên (SESEIU24014); Trần Trung Kỳ (SESEIU24015); Lê Võ Anh Thư (SESEIU24024)"
+consent_physeval: false
+ai_use: "OpenAI Codex: code, mathematical reasoning, tests, numerical studies, plots and Vietnamese documentation."
+state: {h: m, v: m/s, m: kg}
+parameters: {m0: 1.0, mf: 0.6, q: 0.2, ve: 500.0, g: 9.81, c: 0.0, h0: 0.0, v0: 0.0}
+alternative_drag_c_kg_m: 0.002
+methods: [euler, heun, rk4]
+local_checks: [reference_match, within_bounds, convergence_order]
+verification_version: 2
+supplementary_local_checks: [trajectory_reference, dynamics_consistency, trajectory_contract]
+quantities: [v_burnout, h_burnout, apogee, max_acceleration_g]
+acceleration_definition: "max abs(dv/dt)/g, includes both burnout limits; sample-based interior peaks"
+events: [burnout_at_computed_tb, downward_zero_velocity_apogee]
+validity:
+  - "m0 > mf > 0; q,ve,g > 0; c >= 0; h0,v0 >= 0; q*ve > m0*g"
+  - "1D ascent, constant g,c,q,ve; no launch-pad contact or delayed liftoff"
+  - "Stops at apogee; no descent or real-world validation data"
+local_dataset: {file: outputs/local_dataset_200.npz, count: 200, seed: 20261024, official_wmlab: false}
+sampling_assumptions:
+  m0_kg: [0.8, 1.2]
+  propellant_fraction: [0.25, 0.45]
+  ve_m_s: [400, 550]
+  initial_thrust_weight: [1.2, 15]
+  c_kg_m: [0, 0.003]
+official_integration: "Completed in v3 using the supplied de_kit and wmlab 0.1.1; see docs/WMLAB_INTEGRATION_VI.md"

@@ -1,0 +1,15 @@
+id: de-c5-convergence-euler-group
+author: "Phạm Công Anh (SESEIU24002); Nguyễn Đức Anh (SESEIU25003); Trần Trung Kiên (SESEIU24014); Trần Trung Kỳ (SESEIU24015); Lê Võ Anh Thư (SESEIU24024)"
+course: DE
+system: c5_rocket
+law: "No-drag C5; fixed smooth horizon 1.5 s for convergence; full ascent for reported quantities"
+params: {m0: 1.0, mf: 0.6, q: 0.2, ve: 500.0, g: 9.81, c: 0.0, method: euler}
+initial: {h0: 0.0, v0: 0.0}
+t_span: [0.0, 40.0]
+dt: 0.02
+checks:
+  - {name: convergence_order, expected: 1, slack: 0.5, mode: analytic, h: 0.1, horizon: 1.5}
+  - {name: within_bounds, tol: 1.0e-8}
+ai_use: "OpenAI Codex: numerical methods, convergence study and toolkit integration; students review and explain."
+license: ALL-RIGHTS-RESERVED
+consent_physeval: false

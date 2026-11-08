@@ -1,0 +1,18 @@
+id: de-c5-baseline-drag-group
+author: "Phạm Công Anh (SESEIU24002); Nguyễn Đức Anh (SESEIU25003); Trần Trung Kiên (SESEIU24014); Trần Trung Kỳ (SESEIU24015); Lê Võ Anh Thư (SESEIU24024)"
+course: DE
+system: c5_rocket
+law: "Variable-mass rocket; constant thrust during burn, quadratic drag, constant gravity"
+params: {m0: 1.0, mf: 0.6, q: 0.2, ve: 500.0, g: 9.81, c: 0.002, method: rk4}
+initial: {h0: 0.0, v0: 0.0}
+t_span: [0.0, 40.0]
+dt: 0.02
+checks:
+  - {name: reference_match, tol: 1.0e-6}
+  - {name: within_bounds, tol: 1.0e-8}
+  - trajectory_reference
+  - dynamics_consistency
+  - event_consistency
+ai_use: "OpenAI Codex: reference implementation, verification, derivations, tests, wmlab integration and Vietnamese documentation. Students review and explain the work."
+license: ALL-RIGHTS-RESERVED
+consent_physeval: false

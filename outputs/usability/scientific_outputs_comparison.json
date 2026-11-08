@@ -1,0 +1,41 @@
+{
+  "outputs/history_no_drag.csv": {
+    "max_absolute_difference": 0.0,
+    "identical": true
+  },
+  "outputs/history_drag.csv": {
+    "max_absolute_difference": 0.0,
+    "identical": true
+  },
+  "outputs/baseline.csv": {
+    "max_absolute_difference": 0.0,
+    "identical": true
+  },
+  "c5_rocket.npz": {
+    "array_keys": [
+      "t",
+      "Y",
+      "meta",
+      "system",
+      "state"
+    ],
+    "all_arrays_identical": true
+  },
+  "outputs/local_dataset_200.npz": {
+    "array_keys": [
+      "format",
+      "official_wmlab",
+      "seed",
+      "offsets",
+      "t",
+      "y",
+      "a",
+      "parameter_names",
+      "parameters",
+      "quantity_names",
+      "quantities",
+      "consent_physeval"
+    ],
+    "all_arrays_identical": true
+  }
+}

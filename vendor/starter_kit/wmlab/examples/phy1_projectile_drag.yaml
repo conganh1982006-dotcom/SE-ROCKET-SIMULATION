@@ -1,0 +1,19 @@
+# Advanced PHY1 example: with drag, predict the change and verify it numerically.
+id: phy1-proj-drag-demo
+author: "Nguyen Van A"
+course: PHY1
+system: projectile_drag
+law: "Newton's second law with quadratic drag F = -k|v|v"
+params: {g: 9.81, k_over_m: 0.02, m: 1.0}
+initial: {v0: 20.0, angle_deg: 35.0, h0: 0.0}
+t_span: [0.0, 4.0]
+dt: 0.001
+question:
+  text: "With drag k/m = 0.02 /m, what is the range? Explain why it is below 38.31 m and why the optimal angle is no longer 45 degrees."
+  quantity: range
+  answer: 25.43
+  unit: m
+  tolerance: 0.02
+checks: [answer_matches, energy_nonincreasing, convergence_order]
+license: CC-BY-4.0
+consent_physeval: false

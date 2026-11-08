@@ -1,0 +1,131 @@
+system: c5_rocket
+title: C5 Model Rocket — reference simulator and independent verification
+authors:
+- "Phạm Công Anh (SESEIU24002)"
+- "Nguyễn Đức Anh (SESEIU25003)"
+- "Trần Trung Kiên (SESEIU24014)"
+- "Trần Trung Kỳ (SESEIU24015)"
+- "Lê Võ Anh Thư (SESEIU24024)"
+domain: mechanics
+equation: 'h''=v; powered: v''=q*ve/m-g-c*v*abs(v)/m, m''=-q; coast: v''=-g-c*v*abs(v)/mf,
+  m''=0'
+order_and_type: System of three first-order ODEs; variable mass, nonlinear drag, piecewise
+  thrust
+state:
+- name: h
+  unit: m
+  meaning: Altitude, upward positive
+- name: v
+  unit: m/s
+  meaning: Vertical velocity, upward positive
+- name: m
+  unit: kg
+  meaning: Total rocket mass
+parameters:
+- name: m0
+  unit: kg
+  meaning: Initial mass
+  sample_range:
+  - 0.8
+  - 1.2
+  why_this_range: Assumed numerical test range around catalogue baseline 1 kg; not
+    measured hardware data
+- name: mf
+  unit: kg
+  meaning: Dry mass; m0*(1-propellant_fraction)
+  sample_range:
+  - 0.44
+  - 0.9
+  why_this_range: Propellant fraction uniform 0.25–0.45; mass stays positive
+- name: q
+  unit: kg/s
+  meaning: Burn rate; initial_thrust_weight*m0*g/ve
+  sample_range:
+  - 0.01712290909090909
+  - 0.44145
+  why_this_range: Derived envelope; thrust/weight sampled in 1.2–15 ensures immediate
+    lift-off, not an independently uniform q
+- name: ve
+  unit: m/s
+  meaning: Effective exhaust speed
+  sample_range:
+  - 400
+  - 550
+  why_this_range: Assumed range around baseline 500 m/s for numerical testing
+- name: g
+  unit: m/s^2
+  meaning: Constant gravitational acceleration
+  sample_range:
+  - 9.81
+  - 9.81
+  why_this_range: Earth-gravity catalogue baseline
+- name: c
+  unit: kg/m
+  meaning: Quadratic drag coefficient
+  sample_range:
+  - 0
+  - 0.003
+  why_this_range: Includes weak drag and values around baseline 0.002; no calibrated
+    atmosphere
+initial_conditions:
+- name: h0
+  unit: m
+  sample_range:
+  - 0
+  - 0
+- name: v0
+  unit: m/s
+  sample_range:
+  - 0
+  - 0
+time:
+  t_span:
+  - 0
+  - 4
+  dt: 0.02
+  unit: s
+analytic_solution:
+  available: Only for c=0 over both phases; exact coast relation also available with
+    drag
+  formula: 'm=m0-qt; v=v0+ve*ln(m0/m)-gt; h=h0+v0*t+ve*(t-m/q*ln(m0/m))-g*t^2/2; coast:
+    v=vb-g*tau, h=hb+vb*tau-g*tau^2/2'
+  derivation_in_report: Section 1 of outputs/report_vi.pdf; full derivation in docs/MATHEMATICS_VI.md
+reference_values: No-drag exact vb,hb,apogee,tb,ta; for c>0 independent SciPy DOP853
+  (rtol=atol=2e-12), not the RK4 engine
+physical_properties:
+- Mass never below dry mass; linear consumption during burn; constant mass in coast
+- Ascent ends at root v=0; burnout is represented exactly
+- No mechanical-energy-conservation claim during powered flight or with drag
+- Physical model and simulator API remain unchanged from v2
+numerical_methods:
+- euler
+- heun
+- rk4
+observed_convergence_order:
+  euler: 0.9885161602090182
+  heun: 1.9998684550595123
+  rk4: 3.9993884726247093
+validity_limits: 1D ascent, constant g/c/q/ve, m0>mf>0, q*ve>m0*g, nonnegative h0/v0.
+  No wind, rail support, delayed lift-off, rotation or descent. No experimental validation.
+known_failure_modes: Large numerical steps; missing burnout event can reduce convergence
+  order. Toolkit convergence uses a fixed smooth horizon 1.5 s. wmlab check exit 0
+  does not imply passed_all=true; runner inspects JSON and finite convergence order.
+dataset:
+  command: python -m wmlab --lang en dataset --system c5_rocket --module c5_rocket.py
+    --n 200 --seed 20261027 --stride 1 -o c5_rocket.npz
+  n_trajectories: 200
+  shape: (200, 201, 3)
+  scope: Common-time ascent segments [0,4] s, not full event-to-apogee histories.
+    No padding; full ascents remain in outputs/local_dataset_200.npz.
+  validation: All 200 official trajectories checked against independent references;
+    outputs/wmlab/dataset_validation.json
+references:
+- Quang Nguyen, Differential Equations – Simulation Projects v1.0, October 2026, sections
+  1–5 and C5 pp.10–11
+- 'Provided DE_project_starter_kit.zip: de_kit/template_system.py, scenario_template.yaml,
+  system_card_template.yaml; wmlab 0.1.1'
+- https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html
+license: ALL-RIGHTS-RESERVED
+consent_physeval: false
+ai_use: 'OpenAI Codex: implementation, derivations, testing, integration and Vietnamese
+  documentation. Students review and explain.'

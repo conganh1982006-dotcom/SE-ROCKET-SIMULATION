@@ -1,0 +1,19 @@
+# PHY3: particle in a uniform magnetic field. Does the Boris scheme conserve speed?
+id: phy3-cyclotron-boris
+author: "Do G"
+course: PHY3
+system: lorentz
+law: "Lorentz force F = q v x B, E = 0"
+params: {q: 1.0, m: 1.0, E: [0, 0, 0], B: [0, 0, 2.0], scheme: boris}
+initial: {r0: [0, 0, 0], v0: [1.0, 0.0, 0.1]}
+t_span: [0.0, 200.0]
+dt: 0.05
+question:
+  text: "Circular orbit radius (Larmor radius)"
+  quantity: larmor_radius
+  answer: 0.5       # r = m v_perp / (|q| B)
+  unit: m
+  tolerance: 0.001
+checks: [answer_matches, {name: energy_conserved, tol: 1.0e-6}]
+license: CC-BY-4.0
+consent_physeval: true

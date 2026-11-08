@@ -1,0 +1,33 @@
+system: cooling
+title: "Cooling of a hot drink: convective (Newton) + radiative loss"
+authors: ["Instructor example"]
+domain: thermal
+equation: "dT/dt = -k (T - T_env) - r (T^4 - T_env^4)"
+order_and_type: "first-order; linear when r = 0, nonlinear when r > 0"
+state:
+  - {name: T, unit: K, meaning: "drink temperature (well mixed)"}
+parameters:
+  - {name: k, unit: 1/min, meaning: "convective cooling rate", sample_range: [0.02, 0.10], why_this_range: "mug of coffee cools 90->60 C in roughly 5-25 min"}
+  - {name: r, unit: 1/(min K^3), meaning: "radiative coefficient", sample_range: [0, 4.0e-10], why_this_range: "radiative loss comparable to convective at room temperature"}
+  - {name: T_env, unit: K, meaning: "room temperature", sample_range: [293, 303], why_this_range: "20-30 C"}
+initial_conditions:
+  - {name: T0, unit: K, sample_range: [353, 368]}
+time: {t_span: [0, 120], dt: 0.5, unit: min}
+analytic_solution:
+  available: "only for r = 0"
+  formula: "T(t) = T_env + (T0 - T_env) exp(-k t)"
+  derivation_in_report: "section 2 (separation of variables)"
+reference_values: "time_to_target = ln((T0-T_env)/(T_target-T_env))/k; half_time = ln(2)/k  (r = 0)"
+physical_properties:
+  - "T never goes below T_env"
+  - "T decreases monotonically"
+numerical_methods: ["euler", "heun", "rk4"]
+observed_convergence_order: {euler: 0.82, heun: 2.18, rk4: 4.15}   # measured at h = 5 min; Euler is still pre-asymptotic (k h = 0.25)
+validity_limits: "well-mixed drink, constant k (no evaporation, no lid effects)"
+known_failure_modes: "forward Euler overshoots below T_env when k*dt > 1 and diverges when k*dt > 2"
+dataset:
+  command: "python -m wmlab dataset --system cooling --module example_cooling.py --n 200 -o cooling.npz"
+  n_trajectories: 200
+  shape: "(200, 25, 1) with the default stride 10"
+references: ["Newton's law of cooling — any introductory ODE textbook, chapter on first-order linear equations"]
+license: CC-BY-4.0

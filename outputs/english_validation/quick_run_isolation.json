@@ -1,0 +1,10 @@
+{
+  "existing_files_checked": 220,
+  "all_existing_files_preserved": true,
+  "created_runs": [
+    "outputs/quick_runs/20261108T080246_713986Z_no-drag_752323ca",
+    "outputs/quick_runs/20261108T080247_639323Z_with-drag_4a695aac",
+    "outputs/quick_runs/20261108T080248_816956Z_compare_dea0da62"
+  ],
+  "interactive_menu_exit": 0
+}

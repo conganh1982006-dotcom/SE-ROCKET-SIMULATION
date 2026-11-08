@@ -1,0 +1,162 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "characters": 477,
+      "images": 0
+    },
+    {
+      "page": 2,
+      "characters": 832,
+      "images": 0
+    },
+    {
+      "page": 3,
+      "characters": 1759,
+      "images": 0
+    },
+    {
+      "page": 4,
+      "characters": 2106,
+      "images": 0
+    },
+    {
+      "page": 5,
+      "characters": 2184,
+      "images": 0
+    },
+    {
+      "page": 6,
+      "characters": 1966,
+      "images": 0
+    },
+    {
+      "page": 7,
+      "characters": 2521,
+      "images": 0
+    },
+    {
+      "page": 8,
+      "characters": 1142,
+      "images": 1
+    },
+    {
+      "page": 9,
+      "characters": 2195,
+      "images": 0
+    },
+    {
+      "page": 10,
+      "characters": 2084,
+      "images": 0
+    },
+    {
+      "page": 11,
+      "characters": 2565,
+      "images": 0
+    },
+    {
+      "page": 12,
+      "characters": 1778,
+      "images": 0
+    },
+    {
+      "page": 13,
+      "characters": 2263,
+      "images": 0
+    },
+    {
+      "page": 14,
+      "characters": 2243,
+      "images": 0
+    },
+    {
+      "page": 15,
+      "characters": 2481,
+      "images": 0
+    },
+    {
+      "page": 16,
+      "characters": 2723,
+      "images": 0
+    },
+    {
+      "page": 17,
+      "characters": 1726,
+      "images": 1
+    },
+    {
+      "page": 18,
+      "characters": 2634,
+      "images": 0
+    },
+    {
+      "page": 19,
+      "characters": 2291,
+      "images": 0
+    },
+    {
+      "page": 20,
+      "characters": 1458,
+      "images": 0
+    },
+    {
+      "page": 21,
+      "characters": 171,
+      "images": 2
+    },
+    {
+      "page": 22,
+      "characters": 171,
+      "images": 2
+    },
+    {
+      "page": 23,
+      "characters": 2480,
+      "images": 0
+    },
+    {
+      "page": 24,
+      "characters": 1843,
+      "images": 1
+    },
+    {
+      "page": 25,
+      "characters": 2218,
+      "images": 0
+    },
+    {
+      "page": 26,
+      "characters": 1212,
+      "images": 0
+    },
+    {
+      "page": 27,
+      "characters": 1632,
+      "images": 0
+    },
+    {
+      "page": 28,
+      "characters": 2143,
+      "images": 0
+    },
+    {
+      "page": 29,
+      "characters": 1529,
+      "images": 0
+    }
+  ],
+  "pdf_pages": 29,
+  "docx_tables": 21,
+  "docx_images": 7,
+  "language": "English",
+  "translated_tables_checked": 21,
+  "table_numerical_tokens_match_vietnamese": true,
+  "major_sections_match": 18,
+  "subsections_match": 55,
+  "pdf_visual_review": true,
+  "out_of_margin_text_blocks": 0,
+  "old_files_checked": 208,
+  "old_files_modified": [],
+  "word_note": "Content and embedded images checked; not rendered in Microsoft Word."
+}
