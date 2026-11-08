@@ -1,5 +1,4 @@
-# C5 Model Rocket — English edition
-
+# C5 Model Rocket
 Start with **`python main.py`**. The menu runs simulations, comparisons, verification and report generation from one entry point. See [QUICKSTART_EN.md](QUICKSTART_EN.md) for WSL installation, parameters, methods and plots.
 
 This is the English edition of C5 Rocket V3.1. Physics, Euler/Heun/RK4, event handling, numerical tolerances and the Member B adapter contract are preserved. All project-facing text, documentation, comments and generated presentation outputs use English. Preferred documentation names end in `_EN`. This cleaned submission ZIP omits unused duplicate `_VI` guides. Three old `_VI` guides remain solely to preserve references from Python documentation strings and the legacy local system card; their contents are English.
