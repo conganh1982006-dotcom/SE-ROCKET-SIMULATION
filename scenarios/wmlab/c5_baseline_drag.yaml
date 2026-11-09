@@ -13,6 +13,5 @@ checks:
   - trajectory_reference
   - dynamics_consistency
   - event_consistency
-ai_use: "OpenAI Codex: reference implementation, verification, derivations, tests, wmlab integration and Vietnamese documentation. Students review and explain the work."
 license: ALL-RIGHTS-RESERVED
 consent_physeval: false

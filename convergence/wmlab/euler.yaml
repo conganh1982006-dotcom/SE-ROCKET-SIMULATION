@@ -10,6 +10,5 @@ dt: 0.02
 checks:
   - {name: convergence_order, expected: 1, slack: 0.5, mode: analytic, h: 0.1, horizon: 1.5}
   - {name: within_bounds, tol: 1.0e-8}
-ai_use: "OpenAI Codex: numerical methods, convergence study and toolkit integration; students review and explain."
 license: ALL-RIGHTS-RESERVED
 consent_physeval: false

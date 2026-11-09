@@ -1,7 +1,7 @@
 """C5 Model Rocket — module conforming to de_kit/template_system.py, wmlab 0.1.1.
 
 Powered: h'=v; v'=q*ve/m-g-c*v*abs(v)/m; m'=-q. Coast: thrust=0, m=mf.
-SI units; upward positive. Group names/IDs: fill in the scenario author fields.
+SI units; upward positive. Group names/IDs are recorded in the scenario YAML files.
 The existing NumPy Euler/Heun/RK4 engine is reused without changing its API.
 """
 import numpy as np

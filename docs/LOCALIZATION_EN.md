@@ -23,3 +23,5 @@ Historical quick-run CSV values, IDs and timestamps are preserved. Their PNG lab
 Fresh report generation runs pytest, the scientific studies, local verification, actual wmlab checks and both datasets. Current logs and comparison results are stored in outputs/english_validation/. The full English Word/PDF/Markdown report is included as a separately dated reference, with its original evidence dates and provenance.
 
 No new runtime dependencies, GUI, web framework, deployment or external publication are introduced.
+
+Submission update (9 November 2026): author details are populated, obsolete author-entry reminders are corrected, and the group report is included under reports/final/. Earlier localization descriptions refer to their dated release.

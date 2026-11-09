@@ -1,0 +1,1 @@
+AI assistance: OpenAI Codex assisted with code, mathematical reasoning, tests, analysis, documentation and English translation. The student team is responsible for understanding and checking the submitted work. This disclosure is included in the report. The project retains consent_physeval=false.

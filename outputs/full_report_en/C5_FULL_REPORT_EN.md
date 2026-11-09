@@ -4,11 +4,17 @@ Technical Report — C5 Rocket V3.1
 
 Course: Differential Equations
 
-Group: ....................................................................
+Group: SE Rocket team
 
-Student names and IDs: .....................................................
+Student names and IDs:
 
-Instructor: ...............................................................
+- Phạm Công Anh (SESEIU24002)
+- Nguyễn Đức Anh (SESEIU25003)
+- Trần Trung Kiên (SESEIU24014)
+- Trần Trung Kỳ (SESEIU24015)
+- Lê Võ Anh Thư (SESEIU24024)
+
+Instructor: Nguyen Quang
 
 Report date: 2 November 2026
 
@@ -780,4 +786,4 @@ No. The scenario set deliberately includes a coarse Euler case with excessive er
 
 [6] Numerical evidence: outputs/baseline.csv, trajectory_verification.json, burn_rate_optima.csv, convergence/*.json, outputs/wmlab/dataset_validation.json and the stored quick runs.
 
-The existing ai_use metadata records OpenAI Codex assistance with code, testing and documentation; that provenance is retained. Student details, actual task allocation and the group's confirmation should reflect the work performed. The current license is ALL-RIGHTS-RESERVED and consent_physeval is false. Successful verification does not change the data-sharing permissions.
+OpenAI Codex assisted with code, testing, documentation and English translation. This report records that assistance. The student team is responsible for checking and explaining the work. The current license is ALL-RIGHTS-RESERVED and consent_physeval is false. Successful verification does not change the data-sharing permissions.

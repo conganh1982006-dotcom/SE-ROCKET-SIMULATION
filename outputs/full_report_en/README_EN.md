@@ -1,6 +1,6 @@
 # C5 Rocket V3.1 — Full Technical Report (English)
 
-- **C5_FULL_REPORT_EN.docx**: editable Word report; fill in group details on the cover.
+- **C5_FULL_REPORT_EN.docx**: editable historical Word report; group details are populated.
 - **C5_FULL_REPORT_EN.pdf**: checked reading/printing copy, 29 pages.
 - **C5_FULL_REPORT_EN.md**: text source; keep the assets directory beside it.
 - **assets/**: two English flow diagrams and five scientific figures. The four
@@ -27,3 +27,6 @@ and an English compatibility copy at outputs/report_vi.pdf. It does not overwrit
 this separate historical full report. Descriptions of the unchanged original toolkit
 in this report refer to the October V3.1 release; see ../../docs/LOCALIZATION_EN.md
 for the subsequent English text localization and separate hash checks.
+
+Editorial update (9 November 2026): team names, IDs, instructor and document Author properties are populated, and the assistance disclosure is retained in the report. The historical scientific results and original report date remain unchanged. Use ../../reports/final/ for the concise submission report.
+The DATA_SOURCES.json and LAYOUT_CHECKS.json files describe the original historical build; current release checks, including the updated cover, are in ../release_validation/.

@@ -33,3 +33,5 @@ Reproduction command: python -m scripts.reproduce. Actual CLI logs are in output
 Group names/IDs remain to be entered. No separate answer template was included in the supplied ZIP; a short PDF report was prepared. Full ascents remain in outputs/local_dataset_200.npz. The 0–4 s official-format segments are not complete flights.
 
 The toolkit exports no independent acceleration channel; checking Member B acceleration still requires the local Trajectory adapter. There is no experimental validation or guarantee of detecting every below-tolerance deviation.
+
+Metadata note (9 November 2026): the author-entry reminder above describes the original V3 release. All five members are now recorded in the current project metadata. The original numerical validation record is unchanged.

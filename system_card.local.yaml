@@ -6,7 +6,6 @@ official_wmlab: false
 purpose: Independent development and verification reference for Member C
 authors: "Phạm Công Anh (SESEIU24002); Nguyễn Đức Anh (SESEIU25003); Trần Trung Kiên (SESEIU24014); Trần Trung Kỳ (SESEIU24015); Lê Võ Anh Thư (SESEIU24024)"
 consent_physeval: false
-ai_use: "OpenAI Codex: code, mathematical reasoning, tests, numerical studies, plots and Vietnamese documentation."
 state: {h: m, v: m/s, m: kg}
 parameters: {m0: 1.0, mf: 0.6, q: 0.2, ve: 500.0, g: 9.81, c: 0.0, h0: 0.0, v0: 0.0}
 alternative_drag_c_kg_m: 0.002

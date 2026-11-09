@@ -1,11 +1,11 @@
 system: c5_rocket
 title: C5 Model Rocket — reference simulator and independent verification
 authors:
-- "Phạm Công Anh (SESEIU24002)"
-- "Nguyễn Đức Anh (SESEIU25003)"
-- "Trần Trung Kiên (SESEIU24014)"
-- "Trần Trung Kỳ (SESEIU24015)"
-- "Lê Võ Anh Thư (SESEIU24024)"
+- Phạm Công Anh (SESEIU24002)
+- Nguyễn Đức Anh (SESEIU25003)
+- Trần Trung Kiên (SESEIU24014)
+- Trần Trung Kỳ (SESEIU24015)
+- Lê Võ Anh Thư (SESEIU24024)
 domain: mechanics
 equation: 'h''=v; powered: v''=q*ve/m-g-c*v*abs(v)/m, m''=-q; coast: v''=-g-c*v*abs(v)/mf,
   m''=0'
@@ -89,7 +89,7 @@ analytic_solution:
     drag
   formula: 'm=m0-qt; v=v0+ve*ln(m0/m)-gt; h=h0+v0*t+ve*(t-m/q*ln(m0/m))-g*t^2/2; coast:
     v=vb-g*tau, h=hb+vb*tau-g*tau^2/2'
-  derivation_in_report: Section 1 of outputs/report_vi.pdf; full derivation in docs/MATHEMATICS_VI.md
+  derivation_in_report: Section 1 of outputs/report_en.pdf; full derivation in docs/MATHEMATICS_EN.md
 reference_values: No-drag exact vb,hb,apogee,tb,ta; for c>0 independent SciPy DOP853
   (rtol=atol=2e-12), not the RK4 engine
 physical_properties:
@@ -127,5 +127,3 @@ references:
 - https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html
 license: ALL-RIGHTS-RESERVED
 consent_physeval: false
-ai_use: 'OpenAI Codex: implementation, derivations, testing, integration and Vietnamese
-  documentation. Students review and explain.'

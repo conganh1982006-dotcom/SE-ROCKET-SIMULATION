@@ -1,0 +1,1 @@
+Final group report: DE_Report_Concise_EN.docx and its Word-exported PDF. The main body is six pages; cover/contents and appendices are separate. Main_Report_6_Pages_EN.pdf is extracted from the complete PDF. AI assistance is disclosed in the report. The automatic main.py report command generates outputs/report_en.pdf and does not overwrite this final edited report.

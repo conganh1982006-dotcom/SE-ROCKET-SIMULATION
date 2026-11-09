@@ -8,5 +8,4 @@ reference: analytic_no_drag
 tolerances:
   atol: {v_burnout: 0.01, h_burnout: 0.01, apogee: 0.05, t_apogee: 0.001}
   rtol: 0.000001
-ai_use: "OpenAI Codex: implementation, derivation, automated tests and Vietnamese documentation; student must review and explain."
 consent_physeval: false

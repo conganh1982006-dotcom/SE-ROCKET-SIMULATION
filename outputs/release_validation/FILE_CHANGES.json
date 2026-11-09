@@ -1,0 +1,214 @@
+[
+  {
+    "path": "CHANGELOG.md",
+    "change": "modified"
+  },
+  {
+    "path": "QUICKSTART_EN.md",
+    "change": "modified"
+  },
+  {
+    "path": "README.md",
+    "change": "modified"
+  },
+  {
+    "path": "system_card.local.yaml",
+    "change": "modified"
+  },
+  {
+    "path": "system_card.yaml",
+    "change": "modified"
+  },
+  {
+    "path": "convergence/wmlab/euler.yaml",
+    "change": "modified"
+  },
+  {
+    "path": "convergence/wmlab/heun.yaml",
+    "change": "modified"
+  },
+  {
+    "path": "convergence/wmlab/rk4.yaml",
+    "change": "modified"
+  },
+  {
+    "path": "docs/LOCALIZATION_EN.md",
+    "change": "modified"
+  },
+  {
+    "path": "docs/MEMBER_C_HANDOFF_EN.md",
+    "change": "modified"
+  },
+  {
+    "path": "docs/REPORT_DISCLOSURE_EN.txt",
+    "change": "added"
+  },
+  {
+    "path": "docs/REQUIREMENTS_AND_LIMITS_EN.md",
+    "change": "modified"
+  },
+  {
+    "path": "docs/WMLAB_INTEGRATION_EN.md",
+    "change": "modified"
+  },
+  {
+    "path": "docs/WMLAB_INTEGRATION_VI.md",
+    "change": "modified"
+  },
+  {
+    "path": "experiments/report.py",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/pytest.txt",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/pytest.xml",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/report_en.md",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/report_en.pdf",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/report_vi.md",
+    "change": "added"
+  },
+  {
+    "path": "outputs/report_vi.pdf",
+    "change": "added"
+  },
+  {
+    "path": "outputs/summary.json",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/VALIDATION_V3.md",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/full_report_en/C5_FULL_REPORT_EN.docx",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/full_report_en/C5_FULL_REPORT_EN.md",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/full_report_en/C5_FULL_REPORT_EN.pdf",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/full_report_en/README_EN.md",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/release_validation/reproduction.log",
+    "change": "added"
+  },
+  {
+    "path": "outputs/release_validation/VALIDATION.json",
+    "change": "added"
+  },
+  {
+    "path": "outputs/wmlab/summary.json",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/wmlab/logs/c5_analytic_no_drag_check.txt",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/wmlab/logs/c5_analytic_no_drag_validate.txt",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/wmlab/logs/c5_baseline_drag_check.txt",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/wmlab/logs/c5_baseline_drag_validate.txt",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/wmlab/logs/c5_euler_coarse_fail_check.txt",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/wmlab/logs/c5_euler_coarse_fail_validate.txt",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/wmlab/logs/dataset.txt",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/wmlab/logs/euler_check.txt",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/wmlab/logs/euler_validate.txt",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/wmlab/logs/heun_check.txt",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/wmlab/logs/heun_validate.txt",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/wmlab/logs/rk4_check.txt",
+    "change": "modified"
+  },
+  {
+    "path": "outputs/wmlab/logs/rk4_validate.txt",
+    "change": "modified"
+  },
+  {
+    "path": "reports/final/DE_Report_Concise_EN.docx",
+    "change": "added"
+  },
+  {
+    "path": "reports/final/DE_Report_Concise_EN.pdf",
+    "change": "added"
+  },
+  {
+    "path": "reports/final/Main_Report_6_Pages_EN.pdf",
+    "change": "added"
+  },
+  {
+    "path": "reports/final/README.txt",
+    "change": "added"
+  },
+  {
+    "path": "scenarios/01_baseline_drag.yaml",
+    "change": "modified"
+  },
+  {
+    "path": "scenarios/02_analytic_no_drag.yaml",
+    "change": "modified"
+  },
+  {
+    "path": "scenarios/03_euler_coarse_fail.yaml",
+    "change": "modified"
+  },
+  {
+    "path": "scenarios/wmlab/c5_analytic_no_drag.yaml",
+    "change": "modified"
+  },
+  {
+    "path": "scenarios/wmlab/c5_baseline_drag.yaml",
+    "change": "modified"
+  },
+  {
+    "path": "scenarios/wmlab/c5_euler_coarse_fail.yaml",
+    "change": "modified"
+  }
+]

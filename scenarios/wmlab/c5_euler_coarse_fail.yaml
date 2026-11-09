@@ -13,6 +13,5 @@ checks:
   - trajectory_reference
   - dynamics_consistency
   - event_consistency
-ai_use: "OpenAI Codex: implementation, verification and integration. Expected FAIL requires reference_match to fail on numerical error."
 license: ALL-RIGHTS-RESERVED
 consent_physeval: false

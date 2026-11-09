@@ -1,3 +1,16 @@
+# Release changes
+
+## Submission cleanup — 9 November 2026
+
+- Populated all five authors in the current and historical reports, including PDF/Word Author properties and historical cover details.
+- Updated experiments/report.py to read authors from system_card.yaml. Removed stale name-entry text and corrected the remaining mixed-language heading.
+- Removed the scenario-level AI declaration fields from the 11 group YAML configurations at the team’s request. Reports retain the assistance disclosure; original vendor templates and toolkit files are unchanged. See README for the distinction from the catalogue’s per-scenario declaration format.
+- Corrected report/guide paths, stale metadata reminders and editing-process wording in current documentation.
+- Included reports/final/ with the six-page main report, complete report with appendices, and editable Word source.
+- Regenerated the standard reports and scientific evidence through the full reproduction command. Physics, solver algorithms, public APIs and numerical tolerances are unchanged.
+- Validation: 172 pytest tests passed; expected scenario outcomes PASS/PASS/FAIL; three convergence reports passed; 16 local and 12 toolkit mutations detected; all 200 toolkit segments checked. Scientific CSVs and datasets match the input package within the recorded numerical comparison.
+- Detailed file list and validation: outputs/release_validation/FILE_CHANGES.json and VALIDATION.json.
+
 # Changelog
 
 ## V3.1 English edition — 2026-11-08

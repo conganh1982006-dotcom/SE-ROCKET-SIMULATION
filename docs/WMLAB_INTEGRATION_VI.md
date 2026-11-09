@@ -1,6 +1,6 @@
 # Integration with wmlab 0.1.1
 
-The supplied archive was integrated on 27 October 2026. This English edition translates toolkit text; the original 38-file hash manifest remains intact and a separate localization manifest checks the translated source and installed package. No numerical check or threshold was changed to alter a verdict. The supplied ZIP has no separate report answer template. Group names/student IDs remain for students to enter.
+The supplied archive was integrated on 27 October 2026. This English edition translates toolkit text; the original 38-file hash manifest remains intact and a separate localization manifest checks the translated source and installed package. No numerical check or threshold was changed to alter a verdict. The supplied ZIP has no separate report answer template. Group names and student IDs are already recorded in the project YAML files and both system cards.
 
 ## 8. DE kit and wmlab: distinct roles
 
@@ -101,7 +101,7 @@ c5_baseline_drag.yaml contains the following information groups:
 | initial | h0 and v0 |
 | t_span, dt | Requested time interval and time step |
 | checks | Checks and their configured tolerances |
-| ai_use, license, consent_physeval | Assistance provenance and sharing metadata |
+| license, consent_physeval | License and sharing metadata; assistance is disclosed in the report |
 
 For the drag case, checks includes reference_match, within_bounds and the three C5 EXTRA_CHECKS. reference_match uses a tolerance of 10⁻⁶; within_bounds uses 10⁻⁸. The custom checks retain quantity-specific tolerances from TrajectoryTolerances rather than applying one numerical threshold to metres, metres per second and kilograms.
 
@@ -234,4 +234,4 @@ For scenario output, `events` mode preserves burnout and apogee. For dataset out
 
 The official interface exports h,v,m only. Algebraically reconstructed acceleration is used for quantities but is not presented as an independently measured channel. Use the local Trajectory adapter to verify Member B acceleration. Local mutations cover 16 h/v/m/a cases; toolkit mutations cover 12 h/v/m cases.
 
-Metadata retain ai_use, consent_physeval=false and ALL-RIGHTS-RESERVED. No upload, registry submission or publication is performed.
+The report retains the assistance disclosure; project metadata retain consent_physeval=false and ALL-RIGHTS-RESERVED. No upload, registry submission or publication is performed.

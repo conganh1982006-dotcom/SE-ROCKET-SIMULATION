@@ -1,4 +1,4 @@
-COMMAND: /tmp/c5-english-venv/bin/python -m wmlab --lang en check /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_english/scenarios/wmlab/c5_analytic_no_drag.yaml --module c5_rocket.py -o /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_english/outputs/wmlab
+COMMAND: /home/conganh/miniconda3/bin/python -m wmlab --lang en check /home/conganh/SE-ROCKET-SIMULATION/scenarios/wmlab/c5_analytic_no_drag.yaml --module c5_rocket.py -o /home/conganh/SE-ROCKET-SIMULATION/outputs/wmlab
 
 # de-c5-analytic-no-drag-group — c5_rocket
   [PASS] answer_matches         value=1.234e-11    threshold=1e-06  answer 3047.9 vs simulation 3047.9
@@ -10,4 +10,4 @@ COMMAND: /tmp/c5-english-venv/bin/python -m wmlab --lang en check /mnt/c/users/a
   [PASS] dynamics_consistency   value=0            threshold=0  Checks operate on supplied t,Y. Acceleration is not an exported channel; no independent acceleration-output claim here (use the v2 Trajectory adapter for that).
   [PASS] event_consistency      value=0            threshold=0  Checks operate on supplied t,Y. Acceleration is not an exported channel; no independent acceleration-output claim here (use the v2 Trajectory adapter for that).
   Quantities: v_burnout=235.79, h_burnout=214.14, apogee=3047.9, t_burnout=2, t_apogee=26.036, max_acceleration_g=15.989, max_upward_acceleration_g=15.989, max_proper_acceleration_g=16.989
-  => ALL PASSED · report: /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_english/outputs/wmlab/de-c5-analytic-no-drag-group_report.json
+  => ALL PASSED · report: /home/conganh/SE-ROCKET-SIMULATION/outputs/wmlab/de-c5-analytic-no-drag-group_report.json

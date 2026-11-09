@@ -1,4 +1,4 @@
-COMMAND: /tmp/c5-english-venv/bin/python -m wmlab --lang en check /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_english/scenarios/wmlab/c5_euler_coarse_fail.yaml --module c5_rocket.py -o /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_english/outputs/wmlab
+COMMAND: /home/conganh/miniconda3/bin/python -m wmlab --lang en check /home/conganh/SE-ROCKET-SIMULATION/scenarios/wmlab/c5_euler_coarse_fail.yaml --module c5_rocket.py -o /home/conganh/SE-ROCKET-SIMULATION/outputs/wmlab
 
 # de-c5-euler-coarse-fail-group — c5_rocket
   [FAIL] reference_match        value=0.3131       threshold=1e-06  h_burnout: sim=147.091 ref=214.142; v_burnout: sim=219.864 ref=235.793; apogee: sim=2665.7 ref=3047.9; t_burnout: sim=2 ref=2; t_apogee: sim=24.4122 ref=26.036
@@ -7,4 +7,4 @@ COMMAND: /tmp/c5-english-venv/bin/python -m wmlab --lang en check /mnt/c/users/a
   [FAIL] dynamics_consistency   value=2            threshold=0  Checks operate on supplied t,Y. Acceleration is not an exported channel; no independent acceleration-output claim here (use the v2 Trajectory adapter for that).
   [PASS] event_consistency      value=0            threshold=0  Checks operate on supplied t,Y. Acceleration is not an exported channel; no independent acceleration-output claim here (use the v2 Trajectory adapter for that).
   Quantities: v_burnout=219.86, h_burnout=147.09, apogee=2665.7, t_burnout=2, t_apogee=24.412, max_acceleration_g=15.989, max_upward_acceleration_g=15.989, max_proper_acceleration_g=16.989
-  => SOME CHECKS FAILED · report: /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_english/outputs/wmlab/de-c5-euler-coarse-fail-group_report.json
+  => SOME CHECKS FAILED · report: /home/conganh/SE-ROCKET-SIMULATION/outputs/wmlab/de-c5-euler-coarse-fail-group_report.json

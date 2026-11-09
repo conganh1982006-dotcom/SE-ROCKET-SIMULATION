@@ -98,7 +98,7 @@ Call `verify_trajectory(result, params=parameters_requested)` for one trajectory
 
 The starter kit templates, schema, CLI and checks have been integrated. This edition localizes text while preserving numerical logic; see LOCALIZATION_EN for provenance. Use `python -m scripts.wmlab_verify` for toolkit evidence or `python main.py report` for the full pipeline. Read JSON passed_all/checks, not exit code alone.
 
-Fill group names/student IDs, choose unique scenario IDs if needed and record individual contributions. If a separate answer template is issued later, transfer the report content without hand-editing numerical results. The supplied starter archive had no such template.
+Group names and student IDs are already populated. Keep individual contribution statements consistent with the work performed. If a separate answer template is issued later, transfer the report content without hand-editing numerical results. The supplied starter archive had no such template.
 
 Explain why the official dataset contains common-time 0–4 s segments while the local dataset contains full ascents, and why official convergence uses a smooth 1.5 s horizon. Neither finite tests nor 16 mutations guarantee detection of every sub-tolerance or unexported error.
 
@@ -137,4 +137,4 @@ No. If v is positive and a is negative, the rocket is still rising but slowing d
 No. The scenario set deliberately includes a coarse Euler case with excessive error. The demonstration succeeds when the two accurate cases pass and the inaccurate case fails the intended check.
 
 
-Keep the required ai_use disclosure. Metadata default to consent_physeval=false.
+Keep the assistance disclosure in the submitted report. Metadata retain consent_physeval=false.

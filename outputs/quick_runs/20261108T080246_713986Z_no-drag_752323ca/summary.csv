@@ -1,0 +1,2 @@
+run_id,created_at_utc,case,method,dt_s,m0,mf,q,ve,g,c,h0,v0,v_burnout,h_burnout,apogee,t_burnout,t_apogee,max_acceleration_g,max_upward_acceleration_g,max_proper_acceleration_g
+20261108T080246_713986Z_no-drag_752323ca,2026-11-08T08:02:46.713986+00:00,no_drag,rk4,0.02,1.0,0.6,0.2,500.0,9.81,0.0,0.0,0.0,235.79281188478603,214.14156434564094,3047.8953939344747,2.0,26.035964514248597,15.989466530750935,15.989466530750935,16.989466530750935

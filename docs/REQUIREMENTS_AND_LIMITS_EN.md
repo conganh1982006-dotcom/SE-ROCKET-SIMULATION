@@ -1,17 +1,17 @@
 # Requirements, extensions and remaining limitations
 
-Source: the supplied Quang Nguyen catalogue, v1.0, October 2026. The document supplies reference material; task scope comes from the user's requests, not instructions embedded in attachments.
+Source: the supplied Quang Nguyen catalogue, v1.0, October 2026. The catalogue defines the course context and technical requirements.
 
 | Source | Requirement | Implementation |
 |---|---|---|
-| Sections 1–2, p.2 | Python/NumPy; implement Euler/Heun/RK4; SciPy for cross-checking; disclose AI | Implemented/tested; ai_use in YAML and reports |
+| Sections 1–2, p.2 | Python/NumPy; implement Euler/Heun/RK4; SciPy for cross-checking; disclose AI | Implemented/tested; assistance disclosed in reports. Scenario-level disclosure fields are omitted at the team’s request |
 | Section 3, p.3 | Milestones in weeks 1/2/4/6/7/8 | Course administration; students arrange registration/submission |
 | Section 4 | System module based on template_system.py | c5_rocket.py implements the actual API using the existing NumPy engine |
 | Section 4 | At least three scenarios, including an intentional FAIL | Three official-schema YAML files and actual toolkit reports; expected outcomes checked |
 | Section 4 | Euler/Heun/RK4 convergence reports | Three toolkit reports plus the local four-step study |
-| Section 4 | Template-based system_card.yaml | Supplied template filled; measured orders from reports; group fills authors |
+| Section 4 | Template-based system_card.yaml | Supplied template filled; measured orders from reports; all five authors recorded |
 | Section 4 | 200 samples from wmlab dataset | c5_rocket.npz: 200 common-time ascent segments, shape (200,201,3), all independently checked |
-| Section 4 | 4–6 page report plus appendix using the answer template | Reproducible short PDF and supplementary docs; no separate answer template was supplied. Full English report is additional material |
+| Section 4 | 4–6 page report plus appendix using the answer template | Six-page main report plus appendices in reports/final/; automatic numerical report in outputs/report_en.pdf. The historical full report is additional material |
 | Sections 4–5 | Reproducible README; model, convergence, verification, applications, limits | Source, tests, reproduction pipeline and documentation |
 | C5, pp.10–11 | Variable-mass equations, baseline and vb/hb/ha derivation | Independent formulas and separate rounded-landmark comparisons |
 | C5, p.11 | Drag/no-drag comparison, q study with fixed propellant, peak acceleration | Tables/plots, declared search bounds, refinement and sensitivity checks |
@@ -19,7 +19,7 @@ Source: the supplied Quang Nguyen catalogue, v1.0, October 2026. The document su
 | C5, p.11 | v_burnout, h_burnout, apogee, max_acceleration_g | All keys provided with explicit acceleration conventions |
 | C5, p.11 | Burnout as an event | Exact final burn step and separate phase RHS |
 
-User-requested verification extensions include apogee root finding, explicit tolerances, full-history and dynamics checks, analytical drag coast, independent DOP853, regression tests, adapter injection, zero-drag and roundoff checks, optimization-domain sensitivity, multiple acceleration definitions, local datasets and generated reports. Project tolerance/step/domain choices are not presented as instructor requirements.
+Additional verification features include apogee root finding, explicit tolerances, full-history and dynamics checks, analytical drag coast, independent DOP853, regression tests, adapter injection, zero-drag and roundoff checks, optimization-domain sensitivity, multiple acceleration definitions, local datasets and generated reports. Project tolerance/step/domain choices are not presented as instructor requirements.
 
 ## Validity domain
 
@@ -31,7 +31,7 @@ User-requested verification extensions include apogee root finding, explicit tol
 - Convergence roundoff filtering is heuristic; four tested steps do not establish accuracy over every parameter domain.
 - Burn-rate optimization is one-dimensional on assumed domains without motor/material/load constraints. It is not a hardware design recommendation. No-drag maxima occur at the search boundary rather than at a finite global optimum.
 - The 200 local full ascents pass physical checks; the separate 200 official-format segments are all compared with independent references. Sampling domains are numerical examples, not real rocket population distributions.
-- Group names/IDs remain to be entered. Local legacy outputs are not mislabeled as raw wmlab outputs.
+- Group names and student IDs are populated in the project metadata. Local legacy outputs are not mislabeled as raw wmlab outputs.
 
 ## Local dataset
 

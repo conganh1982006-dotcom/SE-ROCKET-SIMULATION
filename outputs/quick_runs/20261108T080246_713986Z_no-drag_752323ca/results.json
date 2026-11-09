@@ -1,0 +1,85 @@
+{
+  "format": "c5-quick-run-v1",
+  "run_id": "20261108T080246_713986Z_no-drag_752323ca",
+  "created_at_utc": "2026-11-08T08:02:46.713986+00:00",
+  "mode": "no-drag",
+  "python": "3.13.14",
+  "method": "rk4",
+  "dt_s": 0.02,
+  "verification_performed": false,
+  "notes": [
+    "Manual simulation; this is not a verification certificate. Run main.py verify to check V3.",
+    "The ascent model stops at apogee; descent to the ground is not simulated.",
+    "Peak acceleration = max |dv/dt| / g, including samples and both limits at burnout.",
+    "Within-phase extrema are grid estimates; reduce dt to assess sensitivity.",
+    "The trajectory CSV uses post-shutdown acceleration at burnout; JSON retains both limits."
+  ],
+  "parameter_units": {
+    "m0": "kg",
+    "mf": "kg",
+    "q": "kg/s",
+    "ve": "m/s",
+    "g": "m/s^2",
+    "c": "kg/m",
+    "h0": "m",
+    "v0": "m/s"
+  },
+  "quantity_units": {
+    "t_burnout": "s",
+    "h_burnout": "m",
+    "v_burnout": "m/s",
+    "apogee": "m",
+    "t_apogee": "s",
+    "max_acceleration_g": "g",
+    "max_upward_acceleration_g": "g",
+    "max_proper_acceleration_g": "g"
+  },
+  "cases": {
+    "no_drag": {
+      "parameters": {
+        "m0": 1.0,
+        "mf": 0.6,
+        "q": 0.2,
+        "ve": 500.0,
+        "g": 9.81,
+        "c": 0.0,
+        "h0": 0.0,
+        "v0": 0.0
+      },
+      "quantities": {
+        "v_burnout": 235.79281188478603,
+        "h_burnout": 214.14156434564094,
+        "apogee": 3047.8953939344747,
+        "t_burnout": 2.0,
+        "t_apogee": 26.035964514248597,
+        "max_acceleration_g": 15.989466530750935,
+        "max_upward_acceleration_g": 15.989466530750935,
+        "max_proper_acceleration_g": 16.989466530750935
+      },
+      "burnout": {
+        "time_s": 2.0,
+        "h_m": 214.14156434564094,
+        "v_m_s": 235.79281188478603,
+        "m_kg": 0.6,
+        "a_before_m_s2": 156.85666666666668,
+        "a_after_m_s2": -9.81
+      },
+      "apogee": {
+        "time_s": 26.035964514248597,
+        "h_m": 3047.8953939344747,
+        "v_m_s": -9.399425682232732e-13,
+        "m_kg": 0.6,
+        "a_before_m_s2": -9.81,
+        "a_after_m_s2": -9.81
+      },
+      "sample_count": 1303,
+      "trajectory_csv": "no_drag.csv"
+    }
+  },
+  "plots": [
+    "altitude.png",
+    "velocity.png",
+    "acceleration.png",
+    "mass.png"
+  ]
+}

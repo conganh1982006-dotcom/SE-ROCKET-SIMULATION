@@ -1,8 +1,10 @@
 # C5 • Model Rocket
 
-## Reference simulator & verification — Member C
+## Model Rocket — Simulation and Verification
 
-Independent reference report for Differential Equations, International University – VNUHCM. Requirements source: Quang Nguyen, Simulation Projects v1.0, October 2026, sections 1–5 and C5 on pages 10–11. Enter group names and student IDs before submission.
+Independent reference report for Differential Equations, International University – VNUHCM. Requirements source: Quang Nguyen, Simulation Projects v1.0, October 2026, sections 1–5 and C5 on pages 10–11.
+
+Authors: Phạm Công Anh (SESEIU24002); Nguyễn Đức Anh (SESEIU25003); Trần Trung Kiên (SESEIU24014); Trần Trung Kỳ (SESEIU24015); Lê Võ Anh Thư (SESEIU24024)
 
 V3 integrates wmlab 0.1.1 from the supplied starter kit, with local verification, actual toolkit JSON reports and an official-format dataset. This English edition translates toolkit text; original and localized hashes are recorded separately. Numerical algorithms are unchanged. The starter ZIP contains no separate report answer template.
 
@@ -111,7 +113,7 @@ V2 compares every h,v,m sample with analytical/DOP853 references; checks h′,v�
 
 This table requires apogee error≤0.05 m and passing physical bounds. λ=−2c|v|/m, z=λΔt; R is the method stability polynomial. max|R|>1 indicates amplification in a frozen linearization, not a theorem for the full nonlinear system. Guards reject 8 s steps for Heun/RK4; see the CSV.
 
-# 4 • Burn rate và peak acceleration
+# 4 • Burn rate and peak acceleration
 
 Fixed propellant: 0.4 kg. Immediate liftoff requires q>m0g/ve=0.019620 kg/s. The lower bound is 0.020601 kg/s (an assumed 5% thrust margin), with upper bounds 0.5, 1 and 2 kg/s. These are numerical study domains, not supplied motor specifications.
 
@@ -157,7 +159,7 @@ The supplementary local_dataset_200.npz retains 200 full ascents to apogee of di
 
 1D ascent with constant g,q,ve,c; no wind, density variation, rail, launch angle or descent. Inputs qve≤m0g are rejected because contact and delayed liftoff are outside scope. Reducing dt can reduce numerical error but cannot remove modeling error. No measured flight data are available for experimental validation.
 
-AI use: OpenAI Codex assisted with code, mathematical reasoning, tests, analysis and documentation; students must review and explain the work. Metadata retain consent_physeval=false; no shared-pool publication is authorized. This reference report does not replace the group presentation or individual contributions.
+AI assistance: OpenAI Codex assisted with code, mathematical reasoning, tests, analysis, documentation and English translation. The student team is responsible for understanding and checking the submitted work. This disclosure is included in the report. The project retains consent_physeval=false.
 
 ## Sources and runtime environment
 

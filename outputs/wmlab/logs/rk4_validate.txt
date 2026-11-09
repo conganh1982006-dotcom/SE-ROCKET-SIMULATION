@@ -1,3 +1,3 @@
-COMMAND: /tmp/c5-english-venv/bin/python -m wmlab --lang en validate /mnt/c/users/admin/documents/chatgpt/de/c5_rocket_english/convergence/wmlab/rk4.yaml --module c5_rocket.py
+COMMAND: /home/conganh/miniconda3/bin/python -m wmlab --lang en validate /home/conganh/SE-ROCKET-SIMULATION/convergence/wmlab/rk4.yaml --module c5_rocket.py
 
 Valid: de-c5-convergence-rk4-group (c5_rocket, DE)

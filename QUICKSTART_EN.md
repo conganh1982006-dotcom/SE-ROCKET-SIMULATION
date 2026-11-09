@@ -17,7 +17,7 @@ The CLI delegates to the existing C5 simulation and verification framework. The 
 Extract the ZIP, open Ubuntu and enter the directory containing `main.py` and `requirements.txt`. For example:
 
 ```bash
-cd /mnt/c/Users/ADMIN/Documents/ChatGPT/DE/c5_rocket_english
+cd /path/to/SE-ROCKET-SIMULATION-main
 python3 --version
 python3 -m venv .venv
 source .venv/bin/activate

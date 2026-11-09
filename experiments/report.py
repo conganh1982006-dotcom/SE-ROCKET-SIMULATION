@@ -1,6 +1,7 @@
 """English reference report generated from saved numerical evidence."""
 import json
 import shutil
+import yaml
 from pathlib import Path
 import xml.etree.ElementTree as ET
 from xml.sax.saxutils import escape
@@ -18,6 +19,11 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def make_reports(s, out):
     out = Path(out)
+    card = yaml.safe_load((ROOT/"system_card.yaml").read_text(encoding="utf-8"))
+    authors = card.get("authors")
+    if not isinstance(authors, list) or not authors or any(not isinstance(a, str) or not a.strip() for a in authors):
+        raise ValueError("system_card.yaml must contain a nonempty list of authors.")
+    author_text = "; ".join(a.strip() for a in authors)
     if "wmlab" not in s:
         raise RuntimeError("Run python -m scripts.reproduce to obtain fresh official wmlab evidence before reporting.")
     official = s["wmlab"]
@@ -70,8 +76,9 @@ def make_reports(s, out):
     no, drag = s["baseline"]
     reduction = no["apogee"]-drag["apogee"]
     heading("C5 • Model Rocket", True)
-    heading("Reference simulator & verification — Member C")
-    paragraph("Independent reference report for Differential Equations, International University – VNUHCM. Requirements source: Quang Nguyen, Simulation Projects v1.0, October 2026, sections 1–5 and C5 on pages 10–11. Enter group names and student IDs before submission.")
+    heading("Model Rocket — Simulation and Verification")
+    paragraph("Independent reference report for Differential Equations, International University – VNUHCM. Requirements source: Quang Nguyen, Simulation Projects v1.0, October 2026, sections 1–5 and C5 on pages 10–11.")
+    paragraph("Authors: "+author_text)
     paragraph(f"V3 integrates wmlab {official['toolkit']['version']} from the supplied starter kit, with local verification, actual toolkit JSON reports and an official-format dataset. This English edition translates toolkit text; original and localized hashes are recorded separately. Numerical algorithms are unchanged. The starter ZIP contains no separate report answer template.")
     table(["Parameter", "Value / unit"], [["m0; mf", "1.0; 0.6 kg"], ["q; ve", "0.2 kg/s; 500 m/s"], ["g; c", "9.81 m/s²; 0 then 0.002 kg/m"], ["h0; v0; tb", "0 m; 0 m/s; (m0−mf)/q = 2 s"]], [180,330])
     heading("Model and algorithms")
@@ -127,7 +134,7 @@ def make_reports(s, out):
           [[f"{r['method']} / {r['dt_s']:g}", "—" if r["apogee_error_m"] is None else f"{r['apogee_error_m']:.5g}", "—" if r["frozen_linear_max_amplification"] is None else f"{r['frozen_linear_max_amplification']:.3g}", "PASS" if r["status"] == "PASS" else "FAIL accuracy/bounds"] for r in selected], [130,130,80,170])
     paragraph("This table requires apogee error≤0.05 m and passing physical bounds. λ=−2c|v|/m, z=λΔt; R is the method stability polynomial. max|R|>1 indicates amplification in a frozen linearization, not a theorem for the full nonlinear system. Guards reject 8 s steps for Heun/RK4; see the CSV.")
 
-    new_page(); heading("4 • Burn rate và peak acceleration", True)
+    new_page(); heading("4 • Burn rate and peak acceleration", True)
     lower = s["burn_rate"]["search_lower_kg_s"]
     paragraph(f"Fixed propellant: 0.4 kg. Immediate liftoff requires q>m0g/ve={s['burn_rate']['lift_off_threshold_kg_s']:.6f} kg/s. The lower bound is {lower:.6f} kg/s (an assumed 5% thrust margin), with upper bounds 0.5, 1 and 2 kg/s. These are numerical study domains, not supplied motor specifications.")
     table(["c (kg/m)", "q_max", "q* (kg/s)", "Apogee (m)", "Location"], [[f"{r['c_kg_m']:g}", f"{r['upper_q']:g}", f"{r['q_star']:.7f}", f"{r['apogee_m']:.4f}", "upper boundary" if r["location"] == "upper_boundary" else "interior"] for r in s["burn_rate"]["optima"]], [80,75,125,120,110])
@@ -150,7 +157,7 @@ def make_reports(s, out):
     paragraph(f"The supplementary local_dataset_200.npz retains {d['count']} full ascents to apogee of differing lengths; {d['physical_checks_passed']} pass physical bounds. Assumed sampling domains: m0=0.8–1.2 kg; fuel fraction=0.25–0.45; ve=400–550 m/s; thrust/weight=1.2–15; c=0–0.003 kg/m. This is not a measured equipment distribution.")
     heading("Limitations and disclosure")
     paragraph("1D ascent with constant g,q,ve,c; no wind, density variation, rail, launch angle or descent. Inputs qve≤m0g are rejected because contact and delayed liftoff are outside scope. Reducing dt can reduce numerical error but cannot remove modeling error. No measured flight data are available for experimental validation.")
-    paragraph("AI use: OpenAI Codex assisted with code, mathematical reasoning, tests, analysis and documentation; students must review and explain the work. Metadata retain consent_physeval=false; no shared-pool publication is authorized. This reference report does not replace the group presentation or individual contributions.")
+    paragraph((ROOT/"docs"/"REPORT_DISCLOSURE_EN.txt").read_text(encoding="utf-8").strip())
     heading("Sources and runtime environment")
     paragraph("[1] Quang Nguyen, Differential Equations – Simulation Projects v1.0 (October 2026), pages 2–4 and 10–11, supplied PDF. [2] Official SciPy solve_ivp documentation: https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html. Mathematical derivations and verification design are in docs/.")
     paragraph("Python "+s["environment"]["python"]+"; "+"; ".join(f"{k} {v}" for k,v in s["environment"]["packages"].items())+". Check details and versions are in summary.json; dependency pins are in requirements-tested.txt.")
@@ -162,7 +169,7 @@ def make_reports(s, out):
 
     doc = SimpleDocTemplate(str(out/"report_en.pdf"), pagesize=A4,
                             rightMargin=42, leftMargin=42, topMargin=35, bottomMargin=42,
-                            title="C5 Model Rocket — Reference Verification", author="Member C reference; AI-assisted",
+                            title="C5 Model Rocket — Reference Verification", author=author_text,
                             invariant=1)
     doc.build(story, onFirstPage=footer, onLaterPages=footer)
     (out/"report_en.md").write_text("\n".join(md), encoding="utf-8")
